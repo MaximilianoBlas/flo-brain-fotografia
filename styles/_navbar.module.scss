@@ -1,0 +1,23 @@
+@import "/styles/theme.module.scss";
+
+.navbarMainContainer {
+    background-color: $navbarColorPrimary;
+    display: flex;
+    width: 70vw;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbarContainer{
+    border: 1px solid white;
+    color: $fontColorPrimary;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: auto;
+    height: 100%;
+    font-size: medium;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    padding: 0% 3%;
+}
