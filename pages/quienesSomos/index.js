@@ -1,7 +1,12 @@
 import React from 'react'
+import Navbar from "../navbar";
+
 
 export default function QuienesSomos() {
   return (
-    <div>QuienesSomos</div>
-  )
+      <div>
+          QuienesSomos
+          <Navbar />
+      </div>
+  );
 }

@@ -1,7 +1,12 @@
 import React from 'react'
+import Navbar from "../navbar";
+
 
 export default function Portafolio() {
   return (
-    <div>Portafolio</div>
-  )
+      <div>
+          Portafolio
+          <Navbar />
+      </div>
+  );
 }
