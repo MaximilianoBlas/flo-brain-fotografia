@@ -1,14 +1,11 @@
-import Link from "next/link";
-import Navbar from "./navbar";
-
+import Navbar from "../components/navbar";
 
 export default function Home() {
-    return (
-        <>
-            <div>
-                inicio 
-                <Navbar />
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div>
+        <Navbar />
+      </div>
+    </>
+  );
 }
