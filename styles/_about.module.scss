@@ -2,7 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap');
 
 .aboutContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   font-family: 'Playfair', serif;
 }
 
-.title{}
+.h2{
+  font-weight: 500;
+
+  margin: 10px 0 0 0;
+}
+
+.h3{
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 0 0;
+}
+
+.p{
+font-size: 14px;
+text-align: center;
+
+margin-top: 0;
+}
+
+.line{
+  width: 60vw;
+  border: 1px solid grey;
+  border-width: 0 0 1px 0;
+  margin-bottom: 10px;
+}
