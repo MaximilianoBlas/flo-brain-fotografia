@@ -1,0 +1,56 @@
+@import "./theme.module.scss";
+
+.mainContainer{
+width: 100vw;
+height: 50vh;
+overflow: hidden;
+overflow-x: scroll;
+}
+
+.arrayContainer{
+    width: 270vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cardContainer{
+width: 50vw;
+height: 90%;
+position: relative;
+margin: 0 5vw;
+background-color: $secondaryColor;
+&:hover{
+  
+}
+}
+
+
+.imageContainer{
+    position: relative;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    &:hover {
+        opacity: 0;
+    }
+}
+
+.title{
+    color: $fontColorPrimary;
+    z-index: 2;
+}
+
+.textContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: -140%;
+}
+
+
+.content{
+color: $fontColorPrimary;
+}
