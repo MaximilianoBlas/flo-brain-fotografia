@@ -15,3 +15,53 @@
 
   margin: 10px 0 0 0;
 }
+
+.topDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 500px;
+  width: 100vw;
+
+  border: 1px solid $secondaryColor;
+}
+
+.bigPictureContainer{
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+}
+
+.prevButton{
+  border: 1px solid $secondaryColor;
+  border-radius: 200px;
+  background-color: transparent;
+
+
+}
+
+.nextButton{
+  border: 1px solid $secondaryColor;
+  border-radius: 200px;
+  background-color: transparent;
+
+}
+
+.smallPictureContainer{
+  border: 1px solid $secondaryColor;
+}
+
+.smallPicture{
+  height: 50px;
+  width: 40px;
+}
+
+.line{
+  width: 60vw;
+  border: 1px solid grey;
+  border-width: 0 0 1px 0;
+  margin-bottom: 10px;
+}

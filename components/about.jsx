@@ -11,9 +11,9 @@ export default function About() {
         independientemente de mi pasión: <br />
         la fotografía de familia. <br />
         Hace 8 años trabajamos en equipo con mi mamá, Patricia. <br />
-        Nada sería lo mismo sin ella, sabe estar en cada detalle <br />
-        ¡Estoy agradecida de tenerla en mi vida <br />
-        y compartir la misma pasión, es muy lindo! <br />
+        Sabe estar en cada detalle,nada sería lo mismo sin ella. <br />
+        Estoy agradecida de tenerla en mi vida <br />
+        y compartir la misma pasión ¡Es muy lindo! <br />
         <br />
         Con el tiempo fue creciendo paso a paso el amor <br />
         por congelar para siempre los momentos mas importantes <br />
