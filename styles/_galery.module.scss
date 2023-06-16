@@ -15,7 +15,7 @@
 
   margin: 10px 0 0 0;
 }
-
+//
 .topDiv{
   display: flex;
   flex-direction: row;
@@ -33,6 +33,11 @@
 
   height: 100%;
   width: 100%;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  margin-bottom: 8px;
 }
 
 .prevButton{
@@ -49,16 +54,48 @@
   background-color: transparent;
 
 }
-
+//
 .smallPictureContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
   border: 1px solid $secondaryColor;
+
+  margin-bottom: 10px;
+}
+
+.miniPicSelect{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  overflow: hidden;
+
+  border: 1px solid $secondaryColor;
+  margin: 0 5px 0 5px;
+}
+
+.verP{
+  position: absolute;
+  z-index: 10;
+
+  color: $secondaryColor;
 }
 
 .smallPicture{
-  height: 50px;
-  width: 40px;
+  position: relative;
+  height: 80px;
+  width: 60px;
+
+  filter: blur(1px);
+
+  z-index: 9;
 }
 
+//
 .line{
   width: 60vw;
   border: 1px solid grey;
