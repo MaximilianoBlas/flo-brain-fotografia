@@ -1,9 +1,55 @@
 @import "./theme.module.scss";
 
-.contactoMainContainer{
+@media screen and (max-width: 450px) {
+
+.mainContainer {
     display: flex;
     justify-content: center;
     background-color: $primaryColor;
-    width: 100vw;
-    height: 100vh;
+    flex-direction: column;
+}
+
+.divForm,
+.titleContainer,
+.nameContainer,
+.lastNameContainer,
+.emailContainer,
+.messageContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.titleContainer {
+    justify-content: center;
+    align-items: center;
+}
+
+.namesContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.button {
+    background-color: $buttonColor;
+    color: aliceblue;
+}
+
+.p{
+    margin-top: 0px;
+    color: red;
+}
+}
+
+@media screen and (max-width: 380px) {
+
+    .namesContainer {
+    flex-direction: column;
+}
 }

@@ -1,3 +1,4 @@
+
 import Navbar from "../components/navbar";
 import About from "@/components/about";
 import Galery from "@/components/galery";
