@@ -1,0 +1,17 @@
+@import "/styles/theme.module.scss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap');
+
+.galeryContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: $globalFont
+}
+
+.h2{
+  font-weight: 500;
+
+  margin: 10px 0 0 0;
+}
