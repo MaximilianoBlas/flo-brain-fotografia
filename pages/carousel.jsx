@@ -12,12 +12,13 @@ import {
     carouselButton,
 } from "../styles/_carousel.module.scss";
 import { useInterval } from "@/hook/useInterval";
+import Image from "next/image";
 
 function Carousel() {
     const [arrayCarousel, setArrayCarousel] = useState([
-        "perfil nuevo.jpg",
-        "logo son marco.jpg",
-        "LOGO JPG.jpg",
+        "/perfil nuevo.jpg",
+        "/logo son marco.jpg",
+        "/LOGO JPG.jpg",
     ]);
     const [refresh, setRefresh] = useState(false);
 
@@ -30,9 +31,9 @@ function Carousel() {
     };
 
     let arrayCarrouselOrigin = [
-        "perfil nuevo.jpg",
-        "logo son marco.jpg",
-        "LOGO JPG.jpg",
+        "/perfil nuevo.jpg",
+        "/logo son marco.jpg",
+        "/LOGO JPG.jpg",
     ];
 
  const changeIndexCarrousel = (e) =>{
@@ -69,7 +70,7 @@ setTimeout(() => {
                 style={refresh ? { opacity: "0" } : { opacity: "1" }}
                 className={carouselImageStatic}
             >
-                <img className={carouselImg} src={arrayCarousel[0]} />
+                <Image fill="true" className={carouselImg} src={arrayCarousel[0]} alt=""/>
             </div>
             <div
                 style={
@@ -81,7 +82,7 @@ setTimeout(() => {
                     refresh ? carouselImageContainer01 : carouselImageContainer1
                 }
             >
-                <img className={carouselImg} src={arrayCarousel[0]} />
+                <Image fill className={carouselImg} src={arrayCarousel[0]} alt=""/>
             </div>
             <div
                 style={
@@ -93,7 +94,7 @@ setTimeout(() => {
                     refresh ? carouselImageContainer02 : carouselImageContainer2
                 }
             >
-                <img className={carouselImg} src={arrayCarousel[1]} />
+                <Image fill className={carouselImg} src={arrayCarousel[1]} alt=""/>
             </div>
             <div className={carouselMainButtonContainer}>
                 <div className={carouselButtonContainer}>

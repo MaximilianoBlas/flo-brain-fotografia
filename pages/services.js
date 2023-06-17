@@ -8,6 +8,7 @@ import {
     image,
     textContainer,
     imageContainer,
+    divBlur
 } from "../styles/_services.module.scss";
 
 export default function Services() {
@@ -66,7 +67,12 @@ Cobertura de tu evento, registrando cada momento
                 {serviceArray.map((e, i) => {
                     return (
                         <div className={cardContainer} key={i}>
-                            <div className={imageContainer}>
+                            <div
+                                className={imageContainer}
+                                // style={{
+                                //     backgroundImage:`url("${e.navegation}")`,
+                                // }}
+                            >
                                 <h3 className={title}>{e.title}</h3>
                                 <Image
                                     className={image}
@@ -74,6 +80,7 @@ Cobertura de tu evento, registrando cada momento
                                     fill={true}
                                     alt=""
                                 />
+                                {/* <div className={divBlur}></div> */}
                             </div>
                             <div className={textContainer}>
                                 <p className={content}>{e.content}</p>
