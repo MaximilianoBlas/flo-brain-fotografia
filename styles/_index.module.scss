@@ -1,5 +1,24 @@
 .indexStyles{
   background-color: #FFE9CE;
-
   margin: -10px;
+}
+
+.mapContactoContainer{
+    display: flex;
+}
+
+.mapContainer{
+    flex: 1;
+}
+.contactoContainer{
+    flex: 1;
+}
+
+@media screen and (max-width: 800px) {
+
+.mapContactoContainer{
+    display: flex;
+    flex-direction: column;
+}
+
 }

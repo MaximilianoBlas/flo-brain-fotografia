@@ -4,6 +4,84 @@
 width: 100vw;
 height: 50vh;
 overflow: hidden;
+}
+
+.arrayContainer{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cardContainer{
+width: 100%;
+height: 90%;
+position: relative;
+margin: 0 1vw;
+background-color: $secondaryColor;
+// background-image: url("/Comuniones.webp");
+backdrop-filter:blur(10px);
+}
+
+
+.imageContainer{
+    position: relative;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    &:hover {
+         animation-name: opac;
+        animation-play-state: running;
+        animation-duration: 20s;
+    }
+}
+@keyframes opac {
+        0% {
+            opacity: 1;
+        }
+        10% {
+            opacity: 0;
+        }
+        90% {
+            opacity: 0;
+        }
+
+    }
+
+    // .divBlur{
+    //     position:absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: black;
+    //     backdrop-filter: blur(10px);
+    //     -webkit-backdrop-filter: blur(10px);
+    // }
+
+.title{
+    color: $fontColorPrimary;
+    z-index: 2;
+}
+
+.textContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: -45vh;
+}
+
+
+.content{
+color: $fontColorPrimary;
+}
+
+
+@media screen and (max-width: 800px) {
+.mainContainer{
+width: 100vw;
+height: 50vh;
+overflow: hidden;
 overflow-x: scroll;
 }
 
@@ -69,10 +147,11 @@ backdrop-filter:blur(10px);
 .textContainer{
     display: flex;
     justify-content: center;
-    margin-top: -120%;
+    margin-top: -45vh;
 }
 
 
 .content{
 color: $fontColorPrimary;
+}
 }
