@@ -16,27 +16,27 @@ export default function Home() {
   if (typeof window !== "undefined") initialY = window.scrollY;
   let [yAxis, setYAxis] = useState(initialY);
 
-  typeof window !== "undefined"
-    ? (window.onscroll = function () {
-        let scrollToY = window.scrollY;
-        setYAxis(scrollToY);
-        console.log(scrollToY);
-      })
-    : null;
+  typeof window !== "undefined" &&
+    (window.onscroll = function () {
+      let scrollToY = window.scrollY;
+      setYAxis(scrollToY);
+      console.log(scrollToY);
+    });
+  //: null;
 
   return (
     <div className={indexStyles}>
       <Navbar />
       <Carousel />
-      <About id="about" />
-      <Services id="services" />
-      <Gallery id="gallery" />
+      <About />
+      <Services />
+      <Gallery />
       <div className={mapContactoContainer}>
         <div className={mapContainer}>
           <LoaderMap />
         </div>
         <div className={contactoContainer}>
-          <Contacto id="contacto" />
+          <Contacto />
         </div>
       </div>
       <Footer />

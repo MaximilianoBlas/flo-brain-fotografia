@@ -8,10 +8,21 @@ import {
     image,
     textContainer,
     imageContainer,
-    divBlur
+    divBlur,imageContainerOpacity
 } from "../styles/_services.module.scss";
+import React, {useState} from "react";
 
 export default function Services() {
+    let [selectedService, setSelectedService] = useState(false);
+
+   let windowSize = typeof window !== "undefined" && window.innerWidth;
+    console.log(windowSize);
+
+    const changeSelectedService = () =>{
+        setSelectedService(!selectedService)
+    }
+
+
     const serviceArray = [
         {
             navegation: "/Sesiones Infantiles.webp",
@@ -66,9 +77,12 @@ Cobertura de tu evento, registrando cada momento
             <div className={arrayContainer}>
                 {serviceArray.map((e, i) => {
                     return (
-                        <div className={cardContainer} key={i}>
+                        <div onClick={changeSelectedService}
+                            className={cardContainer}
+                            key={i}
+                        >
                             <div
-                                className={imageContainer}
+                                className={ windowSize>800? imageContainer : selectedService ? imageContainer :imageContainerOpacity }
                                 // style={{
                                 //     backgroundImage:`url("${e.navegation}")`,
                                 // }}

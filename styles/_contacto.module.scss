@@ -4,7 +4,8 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 0 15px
+    margin: 0 15px 0 15px
+
 }
 
 .divForm,
@@ -16,6 +17,13 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+}
+.nameContainer{
+    flex: 1;
+    margin-right: 20px;
+}
+.lastNameContainer{
+    flex: 1;
 }
 
 .titleContainer {
@@ -44,53 +52,13 @@
     color: red;
 }
 
-
-
-@media screen and (max-width: 450px) {
-
-.mainContainer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 15px
-}
-
-.divForm,
-.titleContainer,
-.nameContainer,
-.lastNameContainer,
-.emailContainer,
-.messageContainer {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
-
-.titleContainer {
-    justify-content: center;
-    align-items: center;
-}
-
-.namesContainer {
-    display: flex;
-    justify-content: space-between;
-}
-
-.buttonContainer {
-    display: flex;
-    justify-content: flex-end;
-    
-}
-
-.button {
-    background-color: $buttonColor;
-    color: aliceblue;
-}
-
-.p{
-    margin-top: 0px;
-    color: red;
-}
+.inputStyle {
+    border-radius: 5px;
+    border-width: 1px;
+   &::placeholder {
+      color: $navbarColor;
+      opacity: 1; 
+    }
 }
 
 @media screen and (max-width: 380px) {
