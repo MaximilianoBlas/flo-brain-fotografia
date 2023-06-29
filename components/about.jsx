@@ -3,7 +3,7 @@ import { aboutContainer, h2, h3, p, line } from "../styles/_about.module.scss";
 export default function About() {
   return (
     <div className={aboutContainer}>
-      <h2 className={h2}>About</h2>
+      <h2 className={h2}>Sobre nosotras</h2>
       <h3 className={h3}>¡Gracias por estar acá!</h3>
       <p className={p}>
         Mi nombre es Florencia, tengo 27 años, soy <br />

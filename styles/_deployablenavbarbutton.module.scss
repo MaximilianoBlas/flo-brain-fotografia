@@ -1,0 +1,33 @@
+.deployableNavBarButton{
+  position: fixed;
+  top: 75px;
+  right: 12px;
+  // top: 13px;
+  // right: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 49px;
+  width: 49PX;
+
+  background-color: grey;
+
+  border-radius: 100px;
+  border: 1px none;
+
+  transition: all ease 150ms;
+
+  z-index: 99;
+}
+
+.lines{
+  height: 2px;
+  width: 8px;
+
+  background-color: whitesmoke;
+  //border: 1px solid whitesmoke;
+  margin: 1px 0 0 0;
+}
