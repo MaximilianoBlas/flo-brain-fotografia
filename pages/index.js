@@ -10,6 +10,7 @@ import { indexStyles, mapContactoContainer, mapContainer, contactoContainer } fr
 import { useEffect, useState } from "react";
 import ToTopButton from "@/components/totopbutton";
 import DeployableNavBarButton from "@/components/deployableNavBarButton";
+import ContactButtons from "@/components/contactButtons";
 
 export default function Home() {
   let initialY;
@@ -20,7 +21,7 @@ export default function Home() {
     (window.onscroll = function () {
       let scrollToY = window.scrollY;
       setYAxis(scrollToY);
-      console.log(scrollToY);
+      // console.log(scrollToY);
     });
   //: null;
 
@@ -42,6 +43,7 @@ export default function Home() {
       <Footer />
       <ToTopButton props={{ yAxis }} />
       <DeployableNavBarButton props={{ yAxis }} />
+      <ContactButtons props={{ yAxis }} />
     </div>
   );
 }

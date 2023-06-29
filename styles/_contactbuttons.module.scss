@@ -1,0 +1,55 @@
+.mainDiv{
+  position: fixed;
+  right: 12px;
+  bottom: 13px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  
+
+  height: 110px;
+  width: 49px;
+
+  //border: 1px solid black;
+}
+
+.toWppButton{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  height: 49px;
+  width: 49PX;
+  // position: relative;
+  
+  // padding-top: 8px;
+  border-radius: 100px;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  
+  transition: all ease 150ms;
+
+  z-index: 99;
+}
+
+.toIgButton{
+  display: flex;
+  align-content: center;
+  align-content: center;
+
+  height: 49px;
+  width: 49PX;
+  position: relative;
+  
+  border-radius: 100px;
+  border: 1px solid whitesmoke;
+  margin-top: 12px;
+  background-color: whitesmoke;
+
+  transition: all ease 150ms;
+
+  z-index: 99;
+}
