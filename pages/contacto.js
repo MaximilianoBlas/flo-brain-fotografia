@@ -10,8 +10,11 @@ import {
     emailContainer,
     messageContainer,
     buttonContainer,
-    button,p
+    button,
+    p,
+    inputStyle,
 } from "../styles/_contacto.module.scss";
+
 
 export default function Contacto() {
 const [input, setInput] = useState({
@@ -80,10 +83,12 @@ const [error, setError] = useState({});
                                     type="text"
                                     name="name"
                                     placeholder="Ingrese su nombre aquí"
-                                    className=""
+                                    className={inputStyle}
                                     onChange={(e) => inputChange(e)}
                                 />
-                                {error.name && <p className={p}>{error.name}</p>}
+                                {error.name && (
+                                    <p className={p}>{error.name}</p>
+                                )}
                             </div>
                             <div className={lastNameContainer}>
                                 <label htmlFor="lastname" className="">
@@ -94,10 +99,12 @@ const [error, setError] = useState({});
                                     type="text"
                                     name="lastname"
                                     placeholder="Ingrese su apellido aquí"
-                                    className=""
+                                    className={inputStyle}
                                     onChange={(e) => inputChange(e)}
                                 />
-                                {error.lastname && <p className={p}>{error.lastname}</p>}
+                                {error.lastname && (
+                                    <p className={p}>{error.lastname}</p>
+                                )}
                             </div>
                         </div>
                         <div className={emailContainer}>
@@ -109,7 +116,7 @@ const [error, setError] = useState({});
                                 type="text"
                                 name="email"
                                 onChange={(e) => inputChange(e)}
-                                className=""
+                                className={inputStyle}
                                 placeholder="Ingrese su mail aquí"
                             />
                             {error.email && <p className={p}>{error.email}</p>}
@@ -122,6 +129,7 @@ const [error, setError] = useState({});
                                 invitados.
                             </label>
                             <textarea
+                                className={inputStyle}
                                 // value=""
                                 name="message"
                                 id=""
@@ -130,7 +138,9 @@ const [error, setError] = useState({});
                                 placeholder="Escribe tu mensaje"
                                 onChange={(e) => inputChange(e)}
                             ></textarea>
-                            {error.message && <p className={p}>{error.message}</p>}
+                            {error.message && (
+                                <p className={p}>{error.message}</p>
+                            )}
                         </div>
                         <div className={buttonContainer}>
                             <input
