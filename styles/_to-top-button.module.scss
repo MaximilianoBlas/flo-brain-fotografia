@@ -1,0 +1,64 @@
+@import "./theme.module.scss";
+
+//Desktop
+
+//Phone
+@media only screen
+and (max-width: 800px) {
+  .toTopButton{
+    display:block;
+    position: fixed;
+    visibility: visible;
+    
+    top: 13px;
+    right: 12px;
+
+    background-color: $logoColor;
+
+    padding: 16px 20px;
+    border: 1px solid transparent;
+    border-radius: 300px;
+
+    z-index: 99;
+
+    transition: all ease 140ms;
+    }
+
+  .toTopButtonVisible{
+    display:block;
+    position: fixed;
+    visibility: visible;
+    
+    top: 9px;
+    right: 8px;
+
+    background-color: $logoColor;
+
+    padding: 16px 20px;
+    border: 1px solid transparent;
+    border-radius: 300px;
+
+    z-index: 99;
+
+    transition: 1s;
+    }
+  
+  .toTopButtonVisible:hover{
+    border: 2px solid whitesmoke
+  }
+
+  .toTopButtonHidden{
+    display: none;
+    visibility: hidden;
+    background-color: $logoColor;
+
+    border: 1px solid whitesmoke;
+    border-radius: 300px;
+
+    transition: 1s;
+    }
+
+  // html:not([data-scroll='1500']) {
+    
+  //   }
+}

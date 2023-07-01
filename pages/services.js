@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {
+
     mainContainer,
     cardContainer,
     arrayContainer,
@@ -11,10 +12,12 @@ import {
     divBlur,
     imageContainerOpacity,
     imageContainerDesktop,
+
 } from "../styles/_services.module.scss";
 import React, { useState } from "react";
 
 export default function Services() {
+
     let [selectedService, setSelectedService] = useState({
         0: false,
         1: false,
@@ -77,6 +80,7 @@ export default function Services() {
             navegation: "/Fiesta.jpg",
             title: "Eventos",
             content: `
+
 - Graduaciones 
 
 - Bautismos
@@ -90,12 +94,11 @@ export default function Services() {
 Cobertura de tu evento, registrando cada momento
 
 `,
-        },
-    ];
+    },
+  ];
 
-    const contentArray = [
-        "Sesiones infantiles Para que quede congelado para siempre el crecimiento de tu pequeño/a , guardamos gestos, instantes para siempre.",
-    ];
+  const contentArray = ["Sesiones infantiles Para que quede congelado para siempre el crecimiento de tu pequeño/a , guardamos gestos, instantes para siempre."];
+
 
     return (
         <div className={mainContainer}>
@@ -135,7 +138,11 @@ Cobertura de tu evento, registrando cada momento
                         </div>
                     );
                 })}
+
             </div>
-        </div>
-    );
+          );
+        })}
+      </div>
+    </div>
+  );
 }
