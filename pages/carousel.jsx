@@ -16,9 +16,10 @@ import Image from "next/image";
 
 function Carousel() {
     const [arrayCarousel, setArrayCarousel] = useState([
-        "/perfil nuevo.jpg",
-        "/logo son marco.jpg",
-        "/LOGO JPG.jpg",
+        "/Carousel 1.jpg",
+        "/Carousel 2.jpg",
+        "/Carousel 3.jpg",
+        "/Carousel 4.jpg",
     ]);
     const [refresh, setRefresh] = useState(false);
 
@@ -31,9 +32,10 @@ function Carousel() {
     };
 
     let arrayCarrouselOrigin = [
-        "/perfil nuevo.jpg",
-        "/logo son marco.jpg",
-        "/LOGO JPG.jpg",
+        "/Carousel 1.jpg",
+        "/Carousel 2.jpg",
+        "/Carousel 3.jpg",
+        "/Carousel 4.jpg",
     ];
 
  const changeIndexCarrousel = (e) =>{
