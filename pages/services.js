@@ -8,48 +8,73 @@ import {
     image,
     textContainer,
     imageContainer,
-    divBlur,imageContainerOpacity
+    divBlur,
+    imageContainerOpacity,
+    imageContainerDesktop,
 } from "../styles/_services.module.scss";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 export default function Services() {
-    let [selectedService, setSelectedService] = useState(false);
+    let [selectedService, setSelectedService] = useState({
+        0: false,
+        1: false,
+        2: false,
+        3: false,
+        4: false,
+    });
 
-   let windowSize = typeof window !== "undefined" && window.innerWidth;
+    const selectedServiceOrigin = {
+        0: false,
+        1: false,
+        2: false,
+        3: false,
+        4: false,
+    };
+
+    let windowSize = typeof window !== "undefined" && window.innerWidth;
     console.log(windowSize);
+    console.log(windowSize > 800);
 
-    const changeSelectedService = () =>{
-        setSelectedService(!selectedService)
-    }
-
+    const changeSelectedService = (e) => {
+      
+        if (!selectedService[e.target.id]) {
+            setSelectedService({
+                selectedServiceOrigin,
+                [e.target.id]: !selectedService[e.target.id],
+            });
+        } else   setSelectedService({
+            ...selectedService,
+            [e.target.id]: !selectedService[e.target.id],
+        });
+    };
 
     const serviceArray = [
         {
-            navegation: "/Sesiones Infantiles.webp",
+            navegation: "/Infantil.jpg",
             title: "Sesiones infantiles",
             content:
                 "Para que quede congelado para siempre el crecimiento de tu pequeño/a , guardamos gestos, instantes para siempre.",
         },
         {
-            navegation: "/Comuniones.webp",
+            navegation: "/Comunion.jpg",
             title: "Comuniones",
             content:
                 "El resultado de las fotografías de primera comunión será irrepetible, una sesión de fotos diferente, naturales.",
         },
         {
-            navegation: "/Sesiones Maternidad.webp",
+            navegation: "/Maternidad.jpg",
             title: "Sesiones Maternidad",
             content:
                 "La llegada de un nuevo miembro a la familia, la dulce espera. Retratamos la conexión de mamá con su bebé , así también con su pareja y hermanit@s si los hubiera. Es una sesión de amor.",
         },
         {
-            navegation: "/15 Años Sesion.webp",
+            navegation: "/15 anos.jpg",
             title: "15 Años Sesión",
             content:
                 "Disfruta de este momento especial y nosotros nos encargamos de todo lo demás.La temática de tu sesión la elegís vos.",
         },
         {
-            navegation: "/Eventos.webp",
+            navegation: "/Fiesta.jpg",
             title: "Eventos",
             content: `
 - Graduaciones 
@@ -77,22 +102,30 @@ Cobertura de tu evento, registrando cada momento
             <div className={arrayContainer}>
                 {serviceArray.map((e, i) => {
                     return (
-                        <div onClick={changeSelectedService}
+                        <div
+                            onClick={(e) => changeSelectedService(e)}
                             className={cardContainer}
                             key={i}
+                            id={i}
                         >
                             <div
-                                className={ windowSize>800? imageContainer : selectedService ? imageContainer :imageContainerOpacity }
-                                // style={{
-                                //     backgroundImage:`url("${e.navegation}")`,
-                                // }}
+                                className={
+                                    windowSize > 800
+                                        ? imageContainerDesktop
+                                        : selectedService[i]
+                                          ? imageContainer
+                                         : imageContainerOpacity
+                                }
                             >
-                                <h3 className={title}>{e.title}</h3>
+                                <h3 className={title} id={i}>
+                                    {e.title}{" "}
+                                </h3>
                                 <Image
                                     className={image}
                                     src={e.navegation}
                                     fill={true}
                                     alt=""
+                                    id={i}
                                 />
                                 {/* <div className={divBlur}></div> */}
                             </div>
