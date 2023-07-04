@@ -1,6 +1,5 @@
 import Image from "next/image";
 import {
-
     mainContainer,
     cardContainer,
     arrayContainer,
@@ -9,15 +8,13 @@ import {
     image,
     textContainer,
     imageContainer,
-    divBlur,
     imageContainerOpacity,
     imageContainerDesktop,
-
+    titleServiceContainer, titleContainer
 } from "../styles/_services.module.scss";
 import React, { useState } from "react";
 
 export default function Services() {
-
     let [selectedService, setSelectedService] = useState({
         0: false,
         1: false,
@@ -80,7 +77,6 @@ export default function Services() {
             navegation: "/Fiesta.jpg",
             title: "Eventos",
             content: `
-
 - Graduaciones 
 
 - Bautismos
@@ -94,14 +90,20 @@ export default function Services() {
 Cobertura de tu evento, registrando cada momento
 
 `,
-    },
-  ];
+        },
+    ];
 
-  const contentArray = ["Sesiones infantiles Para que quede congelado para siempre el crecimiento de tu pequeño/a , guardamos gestos, instantes para siempre."];
-
+    const contentArray = [
+        "Sesiones infantiles Para que quede congelado para siempre el crecimiento de tu pequeño/a , guardamos gestos, instantes para siempre.",
+    ];
 
     return (
         <div className={mainContainer}>
+                            <div className={titleContainer}>
+                                <h2 className={title} >
+                                   Service
+                                </h2>
+                                </div>
             <div className={arrayContainer}>
                 {serviceArray.map((e, i) => {
                     return (
@@ -111,18 +113,20 @@ Cobertura de tu evento, registrando cada momento
                             key={i}
                             id={i}
                         >
+                            <div className={titleServiceContainer}>
+                                <h3 className={title} id={i}>
+                                    {e.title}{" "}
+                                </h3>
+                            </div>
                             <div
                                 className={
                                     windowSize > 800
                                         ? imageContainerDesktop
                                         : selectedService[i]
-                                          ? imageContainer
-                                         : imageContainerOpacity
+                                        ? imageContainer
+                                        : imageContainerOpacity
                                 }
                             >
-                                <h3 className={title} id={i}>
-                                    {e.title}{" "}
-                                </h3>
                                 <Image
                                     className={image}
                                     src={e.navegation}
@@ -138,11 +142,7 @@ Cobertura de tu evento, registrando cada momento
                         </div>
                     );
                 })}
-
             </div>
-          );
-        })}
-      </div>
-    </div>
-  );
+        </div>
+    );
 }
