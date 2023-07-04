@@ -11,7 +11,7 @@ import {
     messageContainer,
     buttonContainer,
     button,
-    p,
+    p, label, h2,
     inputStyle,
 } from "../styles/_contacto.module.scss";
 
@@ -70,12 +70,12 @@ const [error, setError] = useState({});
                 >
                     <div className={divForm}>
                         <div className={titleContainer}>
-                            <h2>Contacto</h2>
+                            <h2 className={h2}>Contacto</h2>
                         </div>
 
                         <div className={namesContainer}>
                             <div className={nameContainer}>
-                                <label htmlFor="name" className="">
+                                <label htmlFor="name" className={label}>
                                     Nombre
                                 </label>
                                 <input
@@ -91,7 +91,7 @@ const [error, setError] = useState({});
                                 )}
                             </div>
                             <div className={lastNameContainer}>
-                                <label htmlFor="lastname" className="">
+                                <label htmlFor="lastname" className={label}>
                                     Apellido
                                 </label>
                                 <input
@@ -108,7 +108,7 @@ const [error, setError] = useState({});
                             </div>
                         </div>
                         <div className={emailContainer}>
-                            <label htmlFor="email" className="">
+                            <label htmlFor="email" className={label}>
                                 Email
                             </label>
                             <input
@@ -122,7 +122,7 @@ const [error, setError] = useState({});
                             {error.email && <p className={p}>{error.email}</p>}
                         </div>
                         <div className={messageContainer}>
-                            <label htmlFor="message" className="">
+                            <label htmlFor="message" className={label}>
                                 Mensaje: ( Especificar fecha, tipo de sesión o
                                 evento) en caso de ser evento : Fecha/ cantidad
                                 de invitados / horario aproximados / cantidad de
