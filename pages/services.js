@@ -130,7 +130,9 @@ Cobertura de tu evento, registrando cada momento
                                 <Image
                                     className={image}
                                     src={e.navegation}
-                                    fill={true}
+                                    // fill={true}
+                                    width={240}
+                                    height={300}
                                     alt=""
                                     id={i}
                                 />
