@@ -45,7 +45,7 @@ export default function Navbar() {
       >
         <Image src={logoPng} fill={true} alt="Flo Barin Fotografía Logo" />
       </motion.div>
-      <span className={logoQuote}>"Congelando recuerdos para toda la vida"</span>
+      <span className={logoQuote}>Congelando recuerdos para toda la vida</span>
       <div className={navBar}>
         <button id="about" className={navbarButton} onClick={scrollToY}>
           Quiénes somos
