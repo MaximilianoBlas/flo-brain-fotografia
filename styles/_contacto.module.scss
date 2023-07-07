@@ -1,9 +1,82 @@
 @import "./theme.module.scss";
 
-.contactoMainContainer{
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap');
+
+.mainContainer {
     display: flex;
     justify-content: center;
-    background-color: $primaryColor;
-    width: 100vw;
-    height: 100vh;
+    flex-direction: column;
+    margin: 0 15px 0 15px
+
+}
+
+.divForm,
+.titleContainer,
+.nameContainer,
+.lastNameContainer,
+.emailContainer,
+.messageContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.nameContainer{
+    flex: 1;
+    margin-right: 20px;
+}
+.lastNameContainer{
+    flex: 1;
+}
+
+.titleContainer {
+    justify-content: center;
+    align-items: center;
+}
+
+.namesContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.button {
+    background-color: $buttonColor;
+    color: aliceblue;
+}
+
+.p{
+    margin-top: 0px;
+    color: red;
+}
+
+.inputStyle {
+    border-radius: 5px;
+    border-width: 1px;
+   &::placeholder {
+      color: $navbarColor;
+      opacity: 1; 
+       font-family: 'Playfair', serif;
+    }
+}
+.h2{
+    font-weight: 500;
+}
+
+.label, .h2, .p{
+    font-family: 'Playfair', serif;
+}
+
+    
+
+
+@media screen and (max-width: 380px) {
+    .namesContainer {
+    flex-direction: column;
+}
 }

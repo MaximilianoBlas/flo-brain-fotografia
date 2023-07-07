@@ -1,0 +1,120 @@
+@import "/styles/theme.module.scss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap');
+
+.galeryContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: $globalFont
+}
+
+.h2{
+  font-weight: 500;
+
+  margin: 10px 0 10px 0;
+}
+//
+.topDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 500px;
+  width: 100vw;
+
+  border: 1px solid $secondaryColor;
+}
+
+.bigPictureContainer{
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  margin-bottom: 8px;
+}
+
+.prevButton{
+  border: 1px solid $secondaryColor;
+  border-radius: 200px;
+  background-color: transparent;
+
+
+}
+
+.nextButton{
+  border: 1px solid $secondaryColor;
+  border-radius: 200px;
+  background-color: transparent;
+
+}
+//
+.smallPictureContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid $secondaryColor;
+
+  margin-bottom: 10px;
+}
+
+.miniPicSelect{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  overflow: hidden;
+
+  border: 1px solid $secondaryColor;
+  margin: 0 5px 0 5px;
+}
+
+.selectedMiniPicSelect{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  overflow: hidden;
+
+  border: 1px solid $secondaryColor;
+  margin: 0 5px 0 5px;
+
+  z-index: 9;
+  background-color: lightgray ;
+  opacity: 50%;
+}
+
+.verP{
+  position: absolute;
+  z-index: 10;
+
+  color: $secondaryColor;
+}
+
+.smallPicture{
+  position: relative;
+  height: 80px;
+  width: 60px;
+
+  filter: blur(1px);
+
+  //z-index: 9;
+}
+
+//
+.line{
+  width: 60vw;
+  border: 1px solid grey;
+  border-width: 0 0 1px 0;
+  margin-bottom: 10px;
+}

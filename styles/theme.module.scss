@@ -1,14 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap');
 
-//colores principales
-$primaryColor : #FAECE1;
+//Colores principales
+ $primaryColor : #FAECE1;
  $secondaryColor :  #D2C6BD;
 
+//Fonts
+$globalFont: 'Playfair', serif;
+
+ //Font Colors
  $fontColorPrimary:#1D0E03;
  $fontColorSecondary:#BB987D;
 
+ //Navbar Colors
  $logoColor:#686464;
 
- // Colores para el Navbar
-
+ $navbarColor : #776A51;
  $navbarColorPrimary:#F8CBB8;
  $navbarColorHover:#323232;
+
+ $buttonColor: #016855;
+
+ //Carousel
+ $carouselDesktopWidth: 70vw;
+ $carouselDesktopHeight :70vh;
+ $carouselMovilWidth: 100vw;
+ $carouselMovilHeight :100vh;
