@@ -13,6 +13,7 @@ import {
     titleServiceContainer, titleContainer
 } from "../styles/_services.module.scss";
 import React, { useState } from "react";
+import { color } from "framer-motion";
 
 export default function Services() {
     let [selectedService, setSelectedService] = useState({
@@ -32,8 +33,8 @@ export default function Services() {
     };
 
     let windowSize = typeof window !== "undefined" && window.innerWidth;
-    console.log(windowSize);
-    console.log(windowSize > 800);
+    // console.log(windowSize);
+    // console.log(windowSize > 800);
 
     const changeSelectedService = (e) => {
       
@@ -113,6 +114,7 @@ Cobertura de tu evento, registrando cada momento
                             key={i}
                             id={i}
                         >
+                            {console.log(windowSize > 800)}
                             <div className={titleServiceContainer}>
                                 <h3 className={title} id={i}>
                                     {e.title}{" "}
@@ -120,7 +122,7 @@ Cobertura de tu evento, registrando cada momento
                             </div>
                             <div
                                 className={
-                                    windowSize > 800
+                                    windowSize && windowSize > 800
                                         ? imageContainerDesktop
                                         : selectedService[i]
                                         ? imageContainer
@@ -135,6 +137,7 @@ Cobertura de tu evento, registrando cada momento
                                     height={300}
                                     alt=""
                                     id={i}
+                                    priority
                                 />
                                 {/* <div className={divBlur}></div> */}
                             </div>
