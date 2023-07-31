@@ -33,8 +33,6 @@ export default function Services() {
     };
 
     let windowSize = typeof window !== "undefined" && window.innerWidth;
-    // console.log(windowSize);
-    // console.log(windowSize > 800);
 
     const changeSelectedService = (e) => {
       
@@ -99,54 +97,53 @@ Cobertura de tu evento, registrando cada momento
     ];
 
     return (
-        <div className={mainContainer}>
-                            <div className={titleContainer}>
-                                <h2 className={title} >
-                                   Service
-                                </h2>
-                                </div>
-            <div className={arrayContainer}>
-                {serviceArray.map((e, i) => {
-                    return (
-                        <div
-                            onClick={(e) => changeSelectedService(e)}
-                            className={cardContainer}
-                            key={i}
-                            id={i}
-                        >
-                            {console.log(windowSize > 800)}
-                            <div className={titleServiceContainer}>
-                                <h3 className={title} id={i}>
-                                    {e.title}{" "}
-                                </h3>
-                            </div>
+        <div>
+                <div className={titleContainer}>
+                    <h2 className={title}>Servicios</h2>
+                </div>
+            <div className={mainContainer}>
+                <div className={arrayContainer}>
+                    {serviceArray.map((e, i) => {
+                        return (
                             <div
-                                className={
-                                    windowSize && windowSize > 800
-                                        ? imageContainerDesktop
-                                        : selectedService[i]
-                                        ? imageContainer
-                                        : imageContainerOpacity
-                                }
+                                onClick={(e) => changeSelectedService(e)}
+                                className={cardContainer}
+                                key={i}
+                                id={i}
                             >
-                                <Image
-                                    className={image}
-                                    src={e.navegation}
-                                    // fill={true}
-                                    width={240}
-                                    height={300}
-                                    alt=""
-                                    id={i}
-                                    priority
-                                />
-                                {/* <div className={divBlur}></div> */}
+                                <div className={titleServiceContainer}>
+                                    <h3 className={title} id={i}>
+                                        {e.title}{" "}
+                                    </h3>
+                                </div>
+                                <div
+                                    className={
+                                        windowSize && windowSize > 800
+                                            ? imageContainerDesktop
+                                            : selectedService[i]
+                                            ? imageContainer
+                                            : imageContainerOpacity
+                                    }
+                                >
+                                    <Image
+                                        className={image}
+                                        src={e.navegation}
+                                        // fill={true}
+                                        width={240}
+                                        height={300}
+                                        alt=""
+                                        id={i}
+                                        priority
+                                    />
+                                    {/* <div className={divBlur}></div> */}
+                                </div>
+                                <div className={textContainer}>
+                                    <p className={content}>{e.content}</p>
+                                </div>
                             </div>
-                            <div className={textContainer}>
-                                <p className={content}>{e.content}</p>
-                            </div>
-                        </div>
-                    );
-                })}
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );
