@@ -6,11 +6,12 @@ import Services from "./services";
 import Contacto from "./contacto";
 import LoaderMap from "./loaderMap";
 import Footer from "@/components/footer";
+import ToTopButton from "@/components/totopbutton";
+import DeployableNavBar from "@/components/deployableNavBar";
+import ContactButtons from "@/components/contactButtons";
+
 import { indexStyles, mapContactoContainer, mapContainer, contactoContainer } from "../styles/_index.module.scss";
 import { useEffect, useState } from "react";
-import ToTopButton from "@/components/totopbutton";
-import DeployableNavBarButton from "@/components/deployableNavBarButton";
-import ContactButtons from "@/components/contactButtons";
 
 export default function Home() {
   let initialY;
@@ -21,9 +22,7 @@ export default function Home() {
     (window.onscroll = function () {
       let scrollToY = window.scrollY;
       setYAxis(scrollToY);
-      // console.log(scrollToY);
     });
-  //: null;
 
   return (
     <div className={indexStyles}>
@@ -41,9 +40,9 @@ export default function Home() {
         </div>
       </div>
       <Footer />
-      <ToTopButton props={{ yAxis }} />
-      <DeployableNavBarButton props={{ yAxis }} />
-      <ContactButtons props={{ yAxis }} />
+      <ToTopButton yAxis={yAxis} />
+      <ContactButtons yAxis={yAxis} />
+      <DeployableNavBar yAxis={yAxis} />
     </div>
   );
 }

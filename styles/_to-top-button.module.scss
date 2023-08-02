@@ -3,13 +3,12 @@
 //Desktop
 
 //Phone
-@media only screen
-and (max-width: 800px) {
-  .toTopButton{
-    display:block;
+@media only screen and (max-width: 800px) {
+  .toTopButton {
+    display: block;
     position: fixed;
     visibility: visible;
-    
+
     top: 13px;
     right: 12px;
 
@@ -19,16 +18,16 @@ and (max-width: 800px) {
     border: 1px solid transparent;
     border-radius: 300px;
 
-    z-index: 99;
+    z-index: 90;
 
     transition: all ease 140ms;
-    }
+  }
 
-  .toTopButtonVisible{
-    display:block;
+  .toTopButtonVisible {
+    display: block;
     position: fixed;
     visibility: visible;
-    
+
     top: 9px;
     right: 8px;
 
@@ -41,13 +40,13 @@ and (max-width: 800px) {
     z-index: 99;
 
     transition: 1s;
-    }
-  
-  .toTopButtonVisible:hover{
-    border: 2px solid whitesmoke
   }
 
-  .toTopButtonHidden{
+  .toTopButtonVisible:hover {
+    border: 2px solid whitesmoke;
+  }
+
+  .toTopButtonHidden {
     display: none;
     visibility: hidden;
     background-color: $logoColor;
@@ -56,9 +55,9 @@ and (max-width: 800px) {
     border-radius: 300px;
 
     transition: 1s;
-    }
+  }
 
   // html:not([data-scroll='1500']) {
-    
+
   //   }
 }
