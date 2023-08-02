@@ -1,141 +1,129 @@
 @import "./theme.module.scss";
 
-.mainContainer{
-width: 100vw;
-height: 50vh;
-overflow: hidden;
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap");
+
+.mainContainer {
+    width: 100vw;
+    height: 60vh;
+    overflow: hidden;
+    margin-top: -2vh;
 }
 
-.arrayContainer{
+.titleContainer {
+    // margin-left: 45vw;
+    // position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.arrayContainer {
     width: 100vw;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
+    margin-top: -7vh;
 }
 
-.cardContainer{
-width: 100%;
-height: 90%;
-position: relative;
-margin: 0 1vw;
-background-color: $secondaryColor;
-// background-image: url("/Comuniones.webp");
-backdrop-filter:blur(10px);
+.cardContainer {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-.imageContainer{
+.imageContainerDesktop {
+    z-index: 2;
     position: relative;
     opacity: 1;
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
+    transition: opacity 2s;
+    overflow: hidden;
     &:hover {
-         animation-name: opac;
-        animation-play-state: running;
-        animation-duration: 20s;
+        opacity: 0;
     }
 }
-@keyframes opac {
-        0% {
-            opacity: 1;
-        }
-        10% {
-            opacity: 0;
-        }
-        90% {
-            opacity: 0;
-        }
 
-    }
-
-    // .divBlur{
-    //     position:absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: black;
-    //     backdrop-filter: blur(10px);
-    //     -webkit-backdrop-filter: blur(10px);
-    // }
-
-.title{
-    color: $fontColorPrimary;
-    z-index: 2;
-}
-
-.textContainer{
+.imageContainer {
+    position: relative;
+    opacity: 0;
     display: flex;
     justify-content: center;
-    margin-top: -45vh;
-}
-
-
-.content{
-color: $fontColorPrimary;
-}
-
-
-@media screen and (max-width: 800px) {
-.mainContainer{
-width: 100vw;
-height: 50vh;
-overflow: hidden;
-overflow-x: scroll;
-}
-
-.arrayContainer{
-    width: 270vw;
+    width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    overflow: hidden;
+    &:hover {
+        transition: opacity 3s ease;
+    }
 }
 
-.cardContainer{
-width: 50vw;
-height: 90%;
-position: relative;
-margin: 0 5vw;
-background-color: $secondaryColor;
-// background-image: url("/Comuniones.webp");
-// backdrop-filter:blur(10px);
-}
-
-
-.imageContainerOpacity{
-position: relative;
+.imageContainerOpacity {
+    z-index: 2;
+    position: relative;
     opacity: 1;
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
+    transition: opacity 2s;
+    overflow: hidden;
+    &:hover {
+        opacity: 0;
+    }
 }
 
+.titleServiceContainer {
+    margin: 2vh 0 -2vh 0;
+    display: flex;
+    justify-content: center;
+}
 
-    // .divBlur{
-    //     position:absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: black;
-    //     backdrop-filter: blur(10px);
-    //     -webkit-backdrop-filter: blur(10px);
-    // }
-
-.title{
+.title {
     color: $fontColorPrimary;
     z-index: 2;
+    font-weight: 500;
 }
 
-.textContainer{
+.textContainer {
     display: flex;
     justify-content: center;
     margin-top: -45vh;
+    width: 150px;
 }
 
-
-.content{
-color: $fontColorPrimary;
+.content,
+.title {
+    // color: $fontlorPrimary;
+    font-family: "Playfair", serif;
 }
+
+@media screen and (max-width: 800px) {
+    .mainContainer {
+        overflow-x: scroll;
+    }
+
+    .arrayContainer {
+        width: 290vw;
+    }
+
+    .imageContainerOpacity {
+        transition: none;
+        &:hover {
+            opacity: 1;
+            transition: opacity 3s ease;
+        }
+    }
+
+    .cardContainer {
+        width: 50vw;
+        margin: 0 5vw;
+    }
 }

@@ -9,16 +9,17 @@ import {
     carouselImageStatic,
     carouselButtonContainer,
     carouselMainButtonContainer,
-    carouselButton,
+    carouselButton, mainContainer
 } from "../styles/_carousel.module.scss";
 import { useInterval } from "@/hook/useInterval";
 import Image from "next/image";
 
 function Carousel() {
     const [arrayCarousel, setArrayCarousel] = useState([
-        "/perfil nuevo.jpg",
-        "/logo son marco.jpg",
-        "/LOGO JPG.jpg",
+        "/Carousel 1.jpg",
+        "/Carousel 2.jpg",
+        "/Carousel 3.jpg",
+        "/Carousel 4.jpg",
     ]);
     const [refresh, setRefresh] = useState(false);
 
@@ -31,9 +32,10 @@ function Carousel() {
     };
 
     let arrayCarrouselOrigin = [
-        "/perfil nuevo.jpg",
-        "/logo son marco.jpg",
-        "/LOGO JPG.jpg",
+        "/Carousel 1.jpg",
+        "/Carousel 2.jpg",
+        "/Carousel 3.jpg",
+        "/Carousel 4.jpg",
     ];
 
  const changeIndexCarrousel = (e) =>{
@@ -65,53 +67,77 @@ setTimeout(() => {
     );
 
     return (
-        <div className={carouselMainContainer}>
-            <div
-                style={refresh ? { opacity: "0" } : { opacity: "1" }}
-                className={carouselImageStatic}
-            >
-                <Image fill="true" className={carouselImg} src={arrayCarousel[0]} alt=""/>
-            </div>
-            <div
-                style={
-                    refresh
-                        ? { animationIterationCount: "infinite" }
-                        : { animationIterationCount: "0" }
-                }
-                className={
-                    refresh ? carouselImageContainer01 : carouselImageContainer1
-                }
-            >
-                <Image fill className={carouselImg} src={arrayCarousel[0]} alt=""/>
-            </div>
-            <div
-                style={
-                    refresh
-                        ? { animationIterationCount: "infinite" }
-                        : { animationIterationCount: "0" }
-                }
-                className={
-                    refresh ? carouselImageContainer02 : carouselImageContainer2
-                }
-            >
-                <Image fill className={carouselImg} src={arrayCarousel[1]} alt=""/>
-            </div>
-            <div className={carouselMainButtonContainer}>
-                <div className={carouselButtonContainer}>
-                    {arrayCarrouselOrigin.map((e, i) => {
-                        if (e === arrayCarousel[0]) {
-                            
-                        }
-                        return (
-                            <button
-                                style={e === arrayCarousel[0]? {backgroundColor:"white"}:{background:"gray"}}
-                                name={i}
-                                onClick={(e) => changeIndexCarrousel(e)}
-                                key={i}
-                                className={carouselButton}
-                            ></button>
-                        );
-                    })}
+        <div className={mainContainer}>
+            <div className={carouselMainContainer}>
+                <div
+                    style={refresh ? { opacity: "0" } : { opacity: "1" }}
+                    className={carouselImageStatic}
+                >
+                    <Image
+                        fill="true"
+                        className={carouselImg}
+                        src={arrayCarousel[0]}
+                        alt=""
+                    />
+                </div>
+                <div
+                    style={
+                        refresh
+                            ? { animationIterationCount: "infinite" }
+                            : { animationIterationCount: "0" }
+                    }
+                    className={
+                        refresh
+                            ? carouselImageContainer01
+                            : carouselImageContainer1
+                    }
+                >
+                    <Image
+                        fill
+                        className={carouselImg}
+                        src={arrayCarousel[0]}
+                        alt=""
+                    />
+                </div>
+                <div
+                    style={
+                        refresh
+                            ? { animationIterationCount: "infinite" }
+                            : { animationIterationCount: "0" }
+                    }
+                    className={
+                        refresh
+                            ? carouselImageContainer02
+                            : carouselImageContainer2
+                    }
+                >
+                    <Image
+                        fill
+                        className={carouselImg}
+                        src={arrayCarousel[1]}
+                        alt=""
+                    />
+                </div>
+                <div className={carouselMainButtonContainer}>
+                    <div className={carouselButtonContainer}>
+                        {arrayCarrouselOrigin.map((e, i) => {
+                            if (e === arrayCarousel[0]) {
+                            }
+                            return (
+                                <button
+                                    style={
+                                        e === arrayCarousel[0]
+                                            ? { backgroundColor: "white" }
+                                            : { background: "gray" }
+                                    }
+                                    name={i}
+                                    onClick={(e) => changeIndexCarrousel(e)}
+                                    key={i}
+                                    className={carouselButton}
+                                ></button>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         </div>
