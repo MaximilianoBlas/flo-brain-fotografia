@@ -5,18 +5,22 @@ import { container, logoContainer, logoQuote, navBar, navbarButton, navbarLineDi
 import logoPng from "../public/LOGO-SIN-FONDO-BORDERLESS.png";
 import { motion } from "framer-motion";
 
-export default function Navbar() {
+export default function Navbar({ windowWidth }) {
   const scrollToY = (e) => {
     //console.log("im scrollin'");
-    e.target.id === "about"
-      ? window.scrollTo({ top: 655, behavior: "smooth" })
-      : e.target.id === "services"
-      ? window.scrollTo({ top: 1055, behavior: "smooth" })
-      : e.target.id === "gallery"
-      ? window.scrollTo({ top: 1495, behavior: "smooth" })
-      : e.target.id === "contact"
-      ? window.scrollTo({ top: 2855, behavior: "smooth" })
-      : console.log("scrollToY is failing");
+    if (windowWidth && windowWidth < 850) {
+      e.target.id === "about"
+        ? window.scrollTo({ top: 655, behavior: "smooth" })
+        : e.target.id === "services"
+        ? window.scrollTo({ top: 1055, behavior: "smooth" })
+        : e.target.id === "gallery"
+        ? window.scrollTo({ top: 1495, behavior: "smooth" })
+        : e.target.id === "contact"
+        ? window.scrollTo({ top: 2855, behavior: "smooth" })
+        : console.log("scrollToY is failing");
+    } else {
+      console.log("Ur pressing desktop navBar!");
+    }
   };
 
   /*function scrollToY(e) {
@@ -34,21 +38,23 @@ export default function Navbar() {
 
   return (
     <div className={container}>
-      <motion.div
+      {/* <motion. */}
+      <div
         className={logoContainer}
-        initial={{ x: 300, opacity: 0 }}
-        animate={{
-          x: 0,
-          opacity: 1,
-        }}
-        transition={{ duration: 1, delay: 1 }}
+        // initial={{ x: 300, opacity: 0 }}
+        // animate={{
+        //   x: 0,
+        //   opacity: 1,
+        // }}
+        // transition={{ duration: 1, delay: 1 }}
       >
-        <Image src={logoPng} fill={true} alt="Flo Barin Fotografía Logo" />
-      </motion.div>
+        <Image src={logoPng} fill={true} style={{ objectFit: "contain" }} priority alt="Flo Barin Fotografía Logo" />
+        {/* </motion. */}
+      </div>
       <span className={logoQuote}>{`"Congelando recuerdos para toda la vida"`}</span>
       <div className={navBar}>
         <button id="about" className={navbarButton} onClick={scrollToY}>
-          Quiénes somos
+          Sobre nosotras
         </button>
         <div className={navbarLineDiv}></div>
         <button id="services" className={navbarButton} onClick={scrollToY}>

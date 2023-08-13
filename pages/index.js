@@ -11,7 +11,8 @@ import DeployableNavBar from "@/components/deployableNavBar";
 import ContactButtons from "@/components/contactButtons";
 
 import { indexStyles, mapContactoContainer, mapContainer, contactoContainer } from "../styles/_index.module.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
+// import LocomotiveScroll from "locomotive-scroll";
 
 export default function Home() {
   let initialY;
@@ -24,25 +25,76 @@ export default function Home() {
       setYAxis(scrollToY);
     });
 
+  let windowWidth;
+  typeof window !== "undefined" && (windowWidth = window.innerWidth);
+
+  // useLayoutEffect(() => {
+  //   const scroll = new LocomotiveScroll();
+  // });
+
+  // useEffect(() => {
+  //   // (async () => {
+  //   //   const LocomotiveScroll = (await import("locomotive-scroll")).default;
+  //   // const locomotiveScroll = new LocomotiveScroll();
+  //   // })();
+  // });
+
+  // const scroll = new LocomotiveScroll();
+
   return (
-    <div className={indexStyles}>
-      <Navbar />
-      <Carousel />
-      <About />
-      <Services />
-      <Gallery />
-      <div className={mapContactoContainer}>
-        <div className={mapContainer}>
-          <LoaderMap />
+    <div className={indexStyles} data-scroll-container>
+      <Navbar
+        windowWidth={windowWidth}
+        // data-scroll-section
+      />
+      <Carousel
+      // data-scroll-section
+      />
+      <About
+      // data-scroll-section
+      />
+      <Services
+      // data-scroll-section
+      />
+      <Gallery
+      // data-scroll-section
+      />
+      <div
+        className={mapContactoContainer}
+        // data-scroll-section
+      >
+        <div
+          className={mapContainer}
+          // data-scroll-section
+        >
+          <LoaderMap
+          // data-scroll-section
+          />
         </div>
-        <div className={contactoContainer}>
-          <Contacto />
+        <div
+          className={contactoContainer}
+          // data-scroll-section
+        >
+          <Contacto
+          // data-scroll-section
+          />
         </div>
       </div>
-      <Footer />
-      <ToTopButton yAxis={yAxis} />
-      <ContactButtons yAxis={yAxis} />
-      <DeployableNavBar yAxis={yAxis} />
+      <Footer
+      // data-scroll-section
+      />
+      <ToTopButton
+        yAxis={yAxis}
+        // data-scroll-section
+      />
+      <ContactButtons
+        yAxis={yAxis}
+        // data-scroll-section
+      />
+      <DeployableNavBar
+        yAxis={yAxis}
+        // data-scroll-section
+      />
     </div>
   );
 }

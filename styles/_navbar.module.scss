@@ -10,13 +10,12 @@
 
 .logoContainer {
   position: relative;
-  align-items: center;
-  justify-content: center;
-  //overflow: hidden;
 
   height: 125px;
-  width: 300px;
+  width: 50vw;
 
+  // padding-right: 800px;
+  // border: 1px solid red;
   margin: 20px 0 10px 0;
 }
 
@@ -29,6 +28,7 @@
   font-weight: 600;
   font-size: 14px;
 
+  // padding: 0 0 0 85px;
   margin: 0 0 15px 0;
 }
 
@@ -45,23 +45,39 @@
 }
 
 .navbarButton {
-  border: none;
+  height: 100%;
   background-color: transparent;
 
+  // border: 1px solid red;
+  border: none;
+  padding: 0px 30px 0px 30px;
+  margin: 0 3px 0 3px;
+
   font-family: "Nanum Myeongjo";
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 15px;
   color: $primaryColor;
+
+  box-shadow: inset 0px 0px 0px 0px $primaryColor;
+
+  transition: box-shadow 400ms ease;
+}
+
+.navbarButton:hover {
+  cursor: pointer;
+
+  box-shadow: inset 0px -10px 5px -8px $primaryColor;
 }
 
 .navbarLineDiv {
   height: 20px;
   border: 1px solid $primaryColor;
-  margin: 0 4px 0 4px;
+  border-width: 0 1px 0 0;
+  margin: 0 0px 0 0px;
 }
 
 //mobile
-@media only screen and (max-device-width: 450px) {
+@media only screen and (max-device-width: 850px) {
   .container {
     display: flex;
     flex-direction: column;
