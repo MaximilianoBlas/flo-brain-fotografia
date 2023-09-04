@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import { container, logoContainer, logoQuote, navBar, navbarButton, navbarLineDiv } from "../styles/_navbar.module.scss";
 import logoPng from "../public/LOGO-SIN-FONDO-BORDERLESS.png";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 export default function Navbar({ windowWidth }) {
   const scrollToY = (e) => {
@@ -19,7 +19,8 @@ export default function Navbar({ windowWidth }) {
         ? window.scrollTo({ top: 2855, behavior: "smooth" })
         : console.log("scrollToY is failing");
     } else {
-      console.log("Ur pressing desktop navBar!");
+      console.log("U r pressing desktop navBar!");
+      e.target.id === "about" ? window.scrollTo({ top: 979, behavior: "smooth" }) : e.target.id === "services" ? window.scrollTo({ top: 1425, behavior: "smooth" }) : null;
     }
   };
 

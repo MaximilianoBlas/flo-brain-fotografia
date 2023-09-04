@@ -9,24 +9,42 @@ import Footer from "@/components/footer";
 import ToTopButton from "@/components/totopbutton";
 import DeployableNavBar from "@/components/deployableNavBar";
 import ContactButtons from "@/components/contactButtons";
+import DeployableDesktopNavBar from "@/components/deployableDesktopNavBar";
 
-import { indexStyles, mapContactoContainer, mapContainer, contactoContainer } from "../styles/_index.module.scss";
-import { useEffect, useLayoutEffect, useState } from "react";
+import {
+  useEffect,
+  // useLayoutEffect,
+  useState,
+} from "react";
+import ServicesAndi from "@/components/servicesAndi";
 // import LocomotiveScroll from "locomotive-scroll";
+
+import {
+  indexStyles,
+  mapContactoContainer,
+  //  mapContainer,
+  //  contactoContainer,
+} from "../styles/_index.module.scss";
 
 export default function Home() {
   let initialY;
   if (typeof window !== "undefined") initialY = window.scrollY;
   let [yAxis, setYAxis] = useState(initialY);
+  const [onCS, setOnCS] = useState(false);
 
   typeof window !== "undefined" &&
     (window.onscroll = function () {
       let scrollToY = window.scrollY;
+      // console.log(window.scrollY);
       setYAxis(scrollToY);
     });
 
   let windowWidth;
   typeof window !== "undefined" && (windowWidth = window.innerWidth);
+
+  useEffect(() => {
+    setOnCS(true);
+  }, []);
 
   // useLayoutEffect(() => {
   //   const scroll = new LocomotiveScroll();
@@ -42,59 +60,27 @@ export default function Home() {
   // const scroll = new LocomotiveScroll();
 
   return (
-    <div className={indexStyles} data-scroll-container>
-      <Navbar
-        windowWidth={windowWidth}
-        // data-scroll-section
-      />
-      <Carousel
-      // data-scroll-section
-      />
-      <About
-      // data-scroll-section
-      />
-      <Services
-      // data-scroll-section
-      />
-      <Gallery
-      // data-scroll-section
-      />
-      <div
-        className={mapContactoContainer}
-        // data-scroll-section
-      >
-        <div
-          className={mapContainer}
-          // data-scroll-section
-        >
-          <LoaderMap
-          // data-scroll-section
-          />
+    onCS && (
+      <div className={indexStyles} data-scroll-container>
+        <Navbar windowWidth={windowWidth} />
+        <DeployableDesktopNavBar yAxis={yAxis} />
+        <Carousel />
+        <About windowWidth={windowWidth} />
+        {windowWidth > 800 ? <ServicesAndi /> : <Services />}
+        <Gallery windowWidth={windowWidth} />
+        <div className={mapContactoContainer}>
+          {/* <div className={mapContainer}> */}
+          <LoaderMap />
+          {/* </div> */}
+          {/* <div className={contactoContainer}> */}
+          <Contacto />
+          {/* </div> */}
         </div>
-        <div
-          className={contactoContainer}
-          // data-scroll-section
-        >
-          <Contacto
-          // data-scroll-section
-          />
-        </div>
+        <Footer />
+        <ToTopButton yAxis={yAxis} />
+        <ContactButtons yAxis={yAxis} />
+        <DeployableNavBar yAxis={yAxis} />
       </div>
-      <Footer
-      // data-scroll-section
-      />
-      <ToTopButton
-        yAxis={yAxis}
-        // data-scroll-section
-      />
-      <ContactButtons
-        yAxis={yAxis}
-        // data-scroll-section
-      />
-      <DeployableNavBar
-        yAxis={yAxis}
-        // data-scroll-section
-      />
-    </div>
+    )
   );
 }
