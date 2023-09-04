@@ -2,6 +2,67 @@
 
 //Desktop
 
+.toTopButton {
+  display: block;
+  position: fixed;
+  visibility: visible;
+
+  top: 1%;
+  right: 2%;
+
+  background-color: $navbarColor;
+
+  padding: 16px 20px;
+  border: 1px solid rgb(46, 26, 18);
+  border-radius: 6px;
+
+  box-shadow: 0px 0px 3px 0px black;
+
+  z-index: 90;
+
+  transition: all ease 140ms, box-shadow 300ms ease-out;
+
+  &:hover {
+    cursor: pointer;
+
+    box-shadow: 0px 0px 8px 0px whitesmoke;
+  }
+}
+
+// .toTopButtonVisible {
+//   display: block;
+//   position: fixed;
+//   visibility: visible;
+
+//   top: 9px;
+//   right: 8px;
+
+//   background-color: $logoColor;
+
+//   padding: 16px 20px;
+//   border: 1px solid transparent;
+//   border-radius: 300px;
+
+//   z-index: 99;
+
+//   transition: 1s;
+// }
+
+// .toTopButtonVisible:hover {
+//   border: 2px solid whitesmoke;
+// }
+
+// .toTopButtonHidden {
+//   display: none;
+//   visibility: hidden;
+//   background-color: $logoColor;
+
+//   border: 1px solid whitesmoke;
+//   border-radius: 300px;
+
+//   transition: 1s;
+// }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Phone
 @media only screen and (max-width: 850px) {
   .toTopButton {
@@ -23,39 +84,39 @@
     transition: all ease 140ms;
   }
 
-  .toTopButtonVisible {
-    display: block;
-    position: fixed;
-    visibility: visible;
+  // .toTopButtonVisible {
+  //   display: block;
+  //   position: fixed;
+  //   visibility: visible;
 
-    top: 9px;
-    right: 8px;
+  //   top: 9px;
+  //   right: 8px;
 
-    background-color: $logoColor;
+  //   background-color: $logoColor;
 
-    padding: 16px 20px;
-    border: 1px solid transparent;
-    border-radius: 300px;
+  //   padding: 16px 20px;
+  //   border: 1px solid transparent;
+  //   border-radius: 300px;
 
-    z-index: 99;
+  //   z-index: 99;
 
-    transition: 1s;
-  }
+  //   transition: 1s;
+  // }
 
-  .toTopButtonVisible:hover {
-    border: 2px solid whitesmoke;
-  }
+  // .toTopButtonVisible:hover {
+  //   border: 2px solid whitesmoke;
+  // }
 
-  .toTopButtonHidden {
-    display: none;
-    visibility: hidden;
-    background-color: $logoColor;
+  // .toTopButtonHidden {
+  //   display: none;
+  //   visibility: hidden;
+  //   background-color: $logoColor;
 
-    border: 1px solid whitesmoke;
-    border-radius: 300px;
+  //   border: 1px solid whitesmoke;
+  //   border-radius: 300px;
 
-    transition: 1s;
-  }
+  //   transition: 1s;
+  // }
 
   // html:not([data-scroll='1500']) {
 

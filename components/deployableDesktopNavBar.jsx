@@ -6,7 +6,7 @@ import logo from "../public/media/logo-footer-cropped.png";
 
 export default function DeployableDesktopNavBar({ yAxis }) {
   return (
-    <nav className={styles.deployableDesktopNavBarNav} style={{ opacity: yAxis > 390 ? 1 : 0 }}>
+    <nav className={styles.deployableDesktopNavBarNav} style={{ opacity: yAxis >= 390 ? 1 : 0 }}>
       <div className={styles.logoContainer}>
         <Image src={logo} fill={true} style={{ objectFit: "contain" }} alt="Logo Flo Brain Fotografía" />
       </div>

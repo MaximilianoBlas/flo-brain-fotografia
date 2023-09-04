@@ -66,7 +66,7 @@ export default function Home() {
         <DeployableDesktopNavBar yAxis={yAxis} />
         <Carousel />
         <About windowWidth={windowWidth} />
-        {windowWidth > 800 ? <ServicesAndi /> : <Services />}
+        {windowWidth > 850 ? <ServicesAndi /> : <Services />}
         <Gallery windowWidth={windowWidth} />
         <div className={mapContactoContainer}>
           {/* <div className={mapContainer}> */}
@@ -77,9 +77,9 @@ export default function Home() {
           {/* </div> */}
         </div>
         <Footer />
-        <ToTopButton yAxis={yAxis} />
+        <ToTopButton yAxis={yAxis} windowWidth={windowWidth} />
         <ContactButtons yAxis={yAxis} />
-        <DeployableNavBar yAxis={yAxis} />
+        {windowWidth <= 850 && <DeployableNavBar yAxis={yAxis} />}
       </div>
     )
   );

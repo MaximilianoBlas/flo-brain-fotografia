@@ -19,13 +19,7 @@ export default function ContactButtons({ yAxis }) {
   return (
     onClient && (
       <div className={mainDiv}>
-        <a
-          href={`https://wa.me/${florWpp}`}
-          target="_blank"
-          style={yAxis >= yAxisVisibleButtonValue ? { opacity: 1 } : { opacity: 0, zIndex: -1 }}
-          className={toWppButton}
-          //</div>onClick={onWppClickHandler}
-        >
+        <a href={`https://wa.me/${florWpp}`} target="_blank" style={yAxis >= yAxisVisibleButtonValue ? { opacity: 1 } : { opacity: 0, zIndex: -1 }} className={toWppButton}>
           <Image
             src={wppLogo}
             height={38}
