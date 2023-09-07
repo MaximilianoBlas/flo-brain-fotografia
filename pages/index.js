@@ -63,7 +63,7 @@ export default function Home() {
     onCS && (
       <div className={indexStyles} data-scroll-container>
         <Navbar windowWidth={windowWidth} />
-        <DeployableDesktopNavBar yAxis={yAxis} />
+        <DeployableDesktopNavBar yAxis={yAxis} windowWidth={windowWidth} />
         <Carousel />
         <About windowWidth={windowWidth} />
         {windowWidth > 850 ? <ServicesAndi /> : <Services />}
@@ -78,7 +78,7 @@ export default function Home() {
         </div>
         <Footer />
         <ToTopButton yAxis={yAxis} windowWidth={windowWidth} />
-        <ContactButtons yAxis={yAxis} />
+        {windowWidth <= 850 && <ContactButtons yAxis={yAxis} windowWidth={windowWidth} />}
         {windowWidth <= 850 && <DeployableNavBar yAxis={yAxis} />}
       </div>
     )

@@ -1,56 +1,133 @@
+//Deskyop
 .mainDiv {
-  position: fixed;
-  right: 12px;
-  bottom: 13px;
+  position: absolute;
+  right: 180px;
+  bottom: 0px;
 
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 
-  height: 110px;
-  width: 49px;
+  height: 69px;
+  width: 10%;
 
-  //border: 1px solid black;
+  border: 1px solid black;
 
   z-index: 90;
 }
 
 .toWppButton {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 
   height: 49px;
   width: 49px;
-  // position: relative;
 
-  // padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 100px;
-  border: 1px solid whitesmoke;
-  background-color: whitesmoke;
+  // border: 1px solid black;
+  // background-color: whitesmoke;
 
-  transition: all ease 150ms;
+  transition: all ease-out 1500ms;
+
+  // color: red;
+  // fill: red;
+
+  z-index: 99;
+  &:hover {
+    //   color: red;
+    //   fill: red;
+    box-shadow: 1px 1px 1px 1px black;
+  }
+}
+
+// .wppSVGStyle {
+//   fill: red;
+//   color: red;
+//   &:hover {
+//     color: red;
+//     fill: red;
+//   }
+// }
+
+.toIgButton {
+  position: relative;
+
+  height: 49px;
+  width: 49px;
+
+  display: flex;
+  align-content: center;
+  align-content: center;
+
+  border-radius: 100px;
+  // border: 1px solid black;
+  // background-color: whitesmoke;
+
+  // transition: all ease 150ms;
 
   z-index: 99;
 }
 
-.toIgButton {
-  display: flex;
-  align-content: center;
-  align-content: center;
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Phone
+@media screen and (max-width: 850px) {
+  .mainDiv {
+    position: fixed;
+    right: 12px;
+    bottom: 13px;
 
-  height: 49px;
-  width: 49px;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 
-  border-radius: 100px;
-  border: 1px solid whitesmoke;
-  margin-top: 12px;
-  background-color: whitesmoke;
+    height: 110px;
+    width: 49px;
 
-  transition: all ease 150ms;
+    //border: 1px solid black;
 
-  z-index: 99;
+    z-index: 90;
+  }
+
+  .toWppButton {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    height: 49px;
+    width: 49px;
+    // position: relative;
+
+    // padding-top: 8px;
+    border-radius: 100px;
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+
+    transition: all ease 150ms;
+
+    z-index: 99;
+  }
+
+  .toIgButton {
+    display: flex;
+    align-content: center;
+    align-content: center;
+
+    height: 49px;
+    width: 49px;
+    position: relative;
+
+    border-radius: 100px;
+    border: 1px solid whitesmoke;
+    margin-top: 12px;
+    background-color: whitesmoke;
+
+    transition: all ease 150ms;
+
+    z-index: 99;
+  }
 }

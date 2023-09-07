@@ -59,7 +59,7 @@ export default function Contacto() {
 
   useEffect(() => {
     setOnCS(true);
-  });
+  }, []);
 
   return (
     onCS && (
