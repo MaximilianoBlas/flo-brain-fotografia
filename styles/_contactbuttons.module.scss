@@ -11,7 +11,7 @@
   height: 69px;
   width: 10%;
 
-  border: 1px solid black;
+  // border: 1px solid black;
 
   z-index: 90;
 }
@@ -19,8 +19,8 @@
 .toWppButton {
   position: relative;
 
-  height: 49px;
-  width: 49px;
+  height: 32px;
+  width: 32px;
 
   display: flex;
   justify-content: center;
@@ -28,47 +28,38 @@
 
   border-radius: 100px;
   // border: 1px solid black;
-  // background-color: whitesmoke;
 
-  transition: all ease-out 1500ms;
-
-  // color: red;
-  // fill: red;
+  transition: all ease-out 300ms;
 
   z-index: 99;
   &:hover {
-    //   color: red;
-    //   fill: red;
-    box-shadow: 1px 1px 1px 1px black;
+    background-color: rgb(21, 175, 21);
   }
 }
 
-// .wppSVGStyle {
-//   fill: red;
-//   color: red;
-//   &:hover {
-//     color: red;
-//     fill: red;
-//   }
-// }
-
 .toIgButton {
   position: relative;
+  overflow: visible;
 
-  height: 49px;
-  width: 49px;
+  // height: 49px;
+  // width: 49px;
+  height: 32px;
+  width: 32px;
 
   display: flex;
   align-content: center;
   align-content: center;
 
-  border-radius: 100px;
+  border-radius: 8px;
   // border: 1px solid black;
-  // background-color: whitesmoke;
-
-  // transition: all ease 150ms;
+  margin: 0 0 0 10px;
 
   z-index: 99;
+
+  transition: all ease-out 300ms;
+  &:hover {
+    background-color: rgb(211, 42, 211);
+  }
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

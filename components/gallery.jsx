@@ -22,6 +22,8 @@ import {
   verP,
   smallPicture,
   enlargedPicContainer,
+  prevEnlargedPicButton,
+  nextEnlargedPicButton,
   closeEnlargedPicButton,
   closeEnlargedPicButtonLinesR,
   closeEnlargedPicButtonLinesL,
@@ -66,7 +68,20 @@ export default function Gallery({ windowWidth }) {
             // style={{ height: "100vh", width: "100vw", position: "fixed", top: 0, left: 0, backgroundColor: "rgba(0, 0, 0, 0.8)", zIndex: 100 }}
             className={enlargedPicContainer}
           >
-            <Image fill sizes="100vw" style={{ maxHeight: "100%", objectFit: "scale-down", opacity: 1 }} src={galleryImages[currentImage]} alt="Enlarged gallery image" />
+            <button className={prevEnlargedPicButton} onClick={prevImage}>
+              <div className={galleryLeftButtonArrow}></div>
+            </button>
+            <Image
+              fill
+              sizes="100vw"
+              priority={true}
+              style={{ maxHeight: "100%", objectFit: "scale-down", opacity: 1 }}
+              src={galleryImages[currentImage]}
+              alt="Fullscreen selected galery image"
+            />
+            <button className={nextEnlargedPicButton} onClick={nextImage}>
+              <div className={galleryRightButtonArrow}></div>
+            </button>
             <button className={closeEnlargedPicButton} onClick={enlargeImageHandler}>
               <div className={closeEnlargedPicButtonLinesL}></div>
               <div className={closeEnlargedPicButtonLinesR}></div>
@@ -92,15 +107,15 @@ export default function Gallery({ windowWidth }) {
               src={galleryImages[currentImage]}
               priority={true}
               fill={true}
-              sizes="100vw"
+              sizes="(max-width: 1080px) 100vw"
               // style={{ objectFit: "cover", maxHeight: "100%" }}
               // style={{ objectFit: "contain", maxHeight: "100%" }}
               style={{
                 objectFit: windowWidth > 850 ? "scale-down" : "cover",
                 // maxHeight: "100%"
               }}
-              placeholder="blur"
-              alt="Full size selected gallery image"
+              // placeholder="blur"
+              alt="Full size preview selected gallery image"
             />
           </div>
           <button className={nextButton} onClick={nextImage}>
@@ -118,9 +133,9 @@ export default function Gallery({ windowWidth }) {
                   <Image
                     id={index}
                     src={pic}
-                    priority={true}
+                    // priority={true}
                     fill={true}
-                    sizes="100vw"
+                    sizes="(max-width: 500px) 40vw"
                     style={{ objectFit: "cover" }}
                     // placeholder="blur"
                     alt="Miniature gallery image"

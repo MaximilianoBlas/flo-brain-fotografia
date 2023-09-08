@@ -7,7 +7,7 @@ import wppSVG from "@/public/media/social/svg/wpp-black.svg";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import { mainDiv, toIgButton, toWppButton, wppSVGStyle } from "@/styles/_contactbuttons.module.scss";
+import { mainDiv, toIgButton, toWppButton, igSVGStyle } from "@/styles/_contactbuttons.module.scss";
 
 export default function ContactButtons({ yAxis, windowWidth }) {
   let { yAxisVisibleButtonValue, florWpp } = Utils;
@@ -32,9 +32,8 @@ export default function ContactButtons({ yAxis, windowWidth }) {
             // height={38}
             // width={38}
             fill={true}
-            alt="Whatsapp logo"
-            style={{ objectFit: "contain" }}
-            className={wppSVGStyle}
+            alt="Whatsapp chat contact link"
+            style={{ objectFit: "cover" }}
           />
         </a>
         <a
@@ -43,7 +42,13 @@ export default function ContactButtons({ yAxis, windowWidth }) {
           style={yAxis >= yAxisVisibleButtonValue ? { opacity: 1 } : { opacity: 0, zIndex: -1 }}
           className={toIgButton}
         >
-          <Image src={igSVG} fill={true} alt="Instagram logo" style={{ objectFit: "contain" }} />
+          <Image
+            src={igSVG}
+            fill={true}
+            alt="Instagram profile link"
+            style={{ objectFit: "contain" }}
+            //  className={igSVGStyle}
+          />
         </a>
       </div>
     )
