@@ -6,7 +6,6 @@ const router = useRouter();
 
 useEffect(() => {
     import("react-facebook-pixel")
-        .then((x) => x.default)
         .then((ReactPixel) => {
             ReactPixel.init("XXXXXXXXXXXXXXXXXXXXX"); // facebookPixelId
             ReactPixel.pageView();
