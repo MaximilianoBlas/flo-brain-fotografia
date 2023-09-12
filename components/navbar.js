@@ -58,7 +58,7 @@ export default function Navbar({ windowWidth }) {
         </button>
         <div className={navbarLineDiv}></div>
         <button id="gallery" className={navbarButton} onClick={scrollToY}>
-          Galería
+          Galeria
         </button>
         <div className={navbarLineDiv}></div>
         <button id="contact" className={navbarButton} onClick={scrollToY}>

@@ -86,19 +86,12 @@
 
   .logoContainer {
     position: relative;
-    align-items: center;
-    justify-content: center;
-    //overflow: hidden;
 
     height: 125px;
     width: 300px;
 
     margin: 20px 0 10px 0;
   }
-
-  /*.logo{
-        position: relative;
-    }*/
 
   .logoQuote {
     font-family: "Nanum Myeongjo";
@@ -125,14 +118,19 @@
     background-color: transparent;
 
     font-family: "Nanum Myeongjo";
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: 300;
+    font-size: 13px;
     color: $primaryColor;
+
+    padding: 3px 10px;
+    margin: 0;
   }
 
   .navbarLineDiv {
     height: 20px;
-    border: 1px solid $primaryColor;
-    margin: 0 4px 0 4px;
+
+    border: none;
+    border-right: 1px solid $primaryColor;
+    margin: 0 2px 0 2px;
   }
 }

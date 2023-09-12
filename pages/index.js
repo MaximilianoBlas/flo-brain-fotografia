@@ -46,7 +46,8 @@ export default function Home() {
     onCS && (
       <div className={indexStyles} data-scroll-container>
         <Navbar windowWidth={windowWidth} />
-        <DeployableDesktopNavBar yAxis={yAxis} windowWidth={windowWidth} />
+        {/* <DeployableDesktopNavBar yAxis={yAxis} windowWidth={windowWidth} /> */}
+        {windowWidth > 850 && <DeployableDesktopNavBar yAxis={yAxis} windowWidth={windowWidth} />}
         <Carousel />
         <About windowWidth={windowWidth} />
         {windowWidth > 850 ? <ServicesAndi /> : <Services />}
