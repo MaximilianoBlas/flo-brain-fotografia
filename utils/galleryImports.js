@@ -10,7 +10,7 @@ import boda1 from "@/public/galerymedia/selected/boda1.jpg";
 import boda2 from "@/public/galerymedia/selected/boda2.jpg";
 import boda3 from "@/public/galerymedia/selected/boda3.jpg";
 import boda4 from "@/public/galerymedia/selected/boda4.jpg";
-import boda5 from "@/public/galerymedia/selected/boda5.jpg";
+// import boda5 from "@/public/galerymedia/selected/boda5.jpg";
 import comunion1 from "@/public/galerymedia/selected/comunion1.jpg";
 import confirmacion1 from "@/public/galerymedia/selected/confirmacion1.jpg";
 import confirmacion2 from "@/public/galerymedia/selected/confirmacion2.jpg";
@@ -56,7 +56,7 @@ const galleryImages = [
   boda2,
   boda3,
   boda4,
-  boda5,
+  // boda5,
   comunion1,
   confirmacion1,
   confirmacion2,
