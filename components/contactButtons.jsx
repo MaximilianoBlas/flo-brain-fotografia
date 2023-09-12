@@ -1,52 +1,56 @@
 import Utils from "@/utils/globalValues";
-import igLogo from "@/public/media/social/ig-color.png";
-import wppLogo from "@/public/media/social/wpp-green.png";
+// import igLogo from "@/public/media/social/ig-color.png";
+// import wppLogo from "@/public/media/social/wpp-green.png";
+import igSVG from "@/public/media/social/svg/instagram.svg";
+import wppSVG from "@/public/media/social/svg/wpp-black.svg";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import { mainDiv, toIgButton, toWppButton } from "@/styles/_contactbuttons.module.scss";
+import { mainDiv, toIgButton, toWppButton, igSVGStyle } from "@/styles/_contactbuttons.module.scss";
 
-export default function ContactButtons({ props }) {
-  let { yAxis } = props;
-  let { yAxisVisibleButtonValue } = Utils;
-  // useEffect(() => {
-  //   console.log(yAxisVisibleButtonValue);
-  // }, []);
+export default function ContactButtons({ yAxis, windowWidth }) {
+  let { yAxisVisibleButtonValue, florWpp } = Utils;
 
-  // function onWppClickHandler() {
-  //   console.log("im wpp button!");
-  // }
+  let [onClient, setOnClient] = useState(false);
 
-  // function onIgClickHandler() {
-  //   console.log("im ig button!");
-  // }
+  useEffect(() => {
+    setOnClient(true);
+  }, []);
+
   return (
-    <div className={mainDiv}>
-      <a
-        href="https://wa.me/5493416415852"
-        target="_blank"
-        style={yAxis >= 302 ? { opacity: 1 } : { opacity: 0, zIndex: -1 }}
-        className={toWppButton}
-        //</div>onClick={onWppClickHandler}
-      >
-        <Image
-          src={wppLogo}
-          height={38}
-          width={38}
-          //fill={true}
-          alt="Whatsapp logo"
-        />
-      </a>
-      <a
-        href="https://www.instagram.com/flobrainfotografia/"
-        target="_blank"
-        style={yAxis >= 302 ? { opacity: 1 } : { opacity: 0, zIndex: -1 }}
-        className={toIgButton}
-        //onClick={onIgClickHandler}
-      >
-        <Image src={igLogo} fill={true} alt="Instagram logo" />
-      </a>
-    </div>
+    onClient && (
+      <div className={mainDiv}>
+        <a
+          href={`https://wa.me/${florWpp}`}
+          target="_blank"
+          style={(windowWidth <= 850 && yAxis >= 302) || (windowWidth > 850 && yAxis >= 390) ? { opacity: 1 } : { opacity: 0, zIndex: -1 }}
+          className={toWppButton}
+        >
+          <Image
+            src={wppSVG}
+            // height={38}
+            // width={38}
+            fill={true}
+            alt="Whatsapp chat contact link"
+            style={{ objectFit: "cover" }}
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/flobrainfotografia/"
+          target="_blank"
+          style={yAxis >= yAxisVisibleButtonValue ? { opacity: 1 } : { opacity: 0, zIndex: -1 }}
+          className={toIgButton}
+        >
+          <Image
+            src={igSVG}
+            fill={true}
+            alt="Instagram profile link"
+            style={{ objectFit: "contain" }}
+            //  className={igSVGStyle}
+          />
+        </a>
+      </div>
+    )
   );
 }

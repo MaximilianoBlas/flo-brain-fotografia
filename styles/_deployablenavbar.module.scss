@@ -1,0 +1,335 @@
+//Desktop////////////////////////////
+
+.deployableNavBarButton {
+  // position: fixed;
+  // top: 75px;
+  // right: 12px;
+  // // top: 13px;
+  // // right: 12px;
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+
+  // height: 49px;
+  // width: 49px;
+
+  // background-color: grey;
+
+  // border-radius: 100px;
+  // border: 1px none;
+
+  // transition: all ease 150ms;
+
+  // z-index: 50;
+}
+
+.lines {
+  // height: 2px;
+  // width: 8px;
+
+  // background-color: whitesmoke;
+  // //border: 1px solid whitesmoke;
+  // margin: 1px 0 0 0;
+}
+
+//Deployable Nav Bar
+
+.deployableNavBarContainer {
+  // position: fixed;
+
+  // top: 0;
+  // right: 0;
+  // left: 0;
+  // bottom: 0;
+
+  // height: 100%;
+  // width: 100%;
+
+  // border: 1px solid green;
+
+  // transition: all ease-out 450ms;
+}
+
+.deployableNavBar {
+  // position: fixed;
+  // right: 0px;
+  // top: 0px;
+  // z-index: 101;
+
+  // display: flex;
+  // flex-direction: column;
+  // //align-content: center;
+  // align-items: center;
+  // //justify-content: center;
+
+  // height: 100%;
+  // width: 80%;
+  // background-color: rgb(197, 175, 148);
+
+  // padding: 65% 0 0 0;
+  // border-left: 1px solid black;
+
+  // transition: all ease-out 350ms;
+}
+
+// .navBarButtonsFirst {
+//   display: flex;
+//   align-items: center;
+
+//   width: 70%;
+//   height: 50px;
+
+//   padding: 5px 0 0 25px;
+
+//   border-width: 0 0 1px 0;
+//   border-style: solid;
+//   border-color: grey;
+// }
+
+.navBarButtons {
+  // display: flex;
+  // align-items: center;
+
+  // width: 70%;
+  // height: 50px;
+
+  // padding: 5px 0 0 25px;
+
+  // border-width: 0 0 1px 0;
+  // border-style: solid;
+  // border-color: grey;
+}
+
+// .navBarButtonsLast {
+//   display: flex;
+//   align-items: center;
+
+//   width: 70%;
+//   height: 50px;
+
+//   padding: 5px 0 0 25px;
+//   border-width: 0 0 1px 0;
+//   border-style: solid;
+//   border-color: grey;
+
+//   margin: 0 0 10px 0;
+// }
+
+.closeButton {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  // background-color: transparent;
+
+  // height: 50px;
+  // width: 50px;
+
+  // border: none;
+  // margin: 10px;
+}
+
+.lineContainer {
+  // display: flex;
+}
+
+.closeButtonLineU {
+  // height: 15px;
+  // width: 10px;
+
+  // width: 0px;
+
+  // border-width: 0 1px 0 0;
+  // border-color: black;
+  // border-style: solid;
+  // margin: 0 0px 0 0;
+
+  // rotate: 135deg;
+}
+
+.closeButtonLineD {
+  // height: 15px;
+  // width: 10px;
+
+  // width: 0px;
+
+  // border-width: 0 0 0 1px;
+  // border-color: black;
+  // border-style: solid;
+  // margin: 0 0px 0 -1px;
+
+  // rotate: 45deg;
+}
+
+//.emptyDeployableNavBarSpace {}
+
+//Mobile////////////////////////
+@media only screen and (max-device-width: 850px) {
+  //Button
+  .deployableNavBarButton {
+    position: fixed;
+    top: 75px;
+    right: 12px;
+    // top: 13px;
+    // right: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 49px;
+    width: 49px;
+
+    background-color: grey;
+
+    border-radius: 100px;
+    border: 1px none;
+
+    transition: all ease 150ms;
+
+    z-index: 50;
+  }
+
+  .lines {
+    height: 2px;
+    width: 8px;
+
+    background-color: whitesmoke;
+    //border: 1px solid whitesmoke;
+    margin: 1px 0 0 0;
+  }
+
+  //Deployable Nav Bar
+
+  .deployableNavBarContainer {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    height: 100%;
+    width: 100%;
+
+    border: 1px solid green;
+
+    transition: all ease-out 450ms;
+  }
+
+  .deployableNavBar {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 101;
+
+    display: flex;
+    flex-direction: column;
+    //align-content: center;
+    align-items: center;
+    //justify-content: center;
+
+    height: 100%;
+    width: 80%;
+    background-color: rgb(197, 175, 148);
+
+    padding: 65% 0 0 0;
+    border-left: 1px solid black;
+
+    transition: all ease-out 350ms;
+  }
+
+  // .navBarButtonsFirst {
+  //   display: flex;
+  //   align-items: center;
+
+  //   width: 70%;
+  //   height: 50px;
+
+  //   padding: 5px 0 0 25px;
+
+  //   border-width: 0 0 1px 0;
+  //   border-style: solid;
+  //   border-color: grey;
+  // }
+
+  .navBarButtons {
+    display: flex;
+    align-items: center;
+
+    width: 70%;
+    height: 50px;
+
+    padding: 5px 0 0 25px;
+
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: grey;
+  }
+
+  // .navBarButtonsLast {
+  //   display: flex;
+  //   align-items: center;
+
+  //   width: 70%;
+  //   height: 50px;
+
+  //   padding: 5px 0 0 25px;
+  //   border-width: 0 0 1px 0;
+  //   border-style: solid;
+  //   border-color: grey;
+
+  //   margin: 0 0 10px 0;
+  // }
+
+  .closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+
+    height: 50px;
+    width: 50px;
+
+    border: none;
+    margin: 10px;
+  }
+
+  .lineContainer {
+    display: flex;
+  }
+
+  .closeButtonLineU {
+    height: 15px;
+    width: 10px;
+
+    width: 0px;
+
+    border-width: 0 1px 0 0;
+    border-color: black;
+    border-style: solid;
+    margin: 0 0px 0 0;
+
+    rotate: 135deg;
+  }
+
+  .closeButtonLineD {
+    height: 15px;
+    width: 10px;
+
+    width: 0px;
+
+    border-width: 0 0 0 1px;
+    border-color: black;
+    border-style: solid;
+    margin: 0 0px 0 -1px;
+
+    rotate: 45deg;
+  }
+
+  //.emptyDeployableNavBarSpace {}
+}
