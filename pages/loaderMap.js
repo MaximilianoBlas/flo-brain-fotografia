@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Map from "./map";
+import Map from "@/components/map.js";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 export default function LoaderMap() {

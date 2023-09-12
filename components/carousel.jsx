@@ -60,13 +60,13 @@ function Carousel() {
     <div className={mainContainer}>
       <div className={carouselMainContainer}>
         <div style={refresh ? { opacity: "0" } : { opacity: "1" }} className={carouselImageStatic}>
-          <Image fill="true" className={carouselImg} src={arrayCarousel[0]} alt="Corrousel image" style={{ objectFit: "contain" }} />
+          <Image fill="true" className={carouselImg} src={arrayCarousel[0]} alt="Corrousel image" style={{ objectFit: "contain" }} priority={true} />
         </div>
         <div style={refresh ? { animationIterationCount: "infinite" } : { animationIterationCount: "0" }} className={refresh ? carouselImageContainer01 : carouselImageContainer1}>
-          <Image fill className={carouselImg} src={arrayCarousel[0]} alt="Corrousel image" style={{ objectFit: "contain" }} />
+          <Image fill className={carouselImg} src={arrayCarousel[0]} alt="Corrousel image" style={{ objectFit: "contain" }} priority={true} />
         </div>
         <div style={refresh ? { animationIterationCount: "infinite" } : { animationIterationCount: "0" }} className={refresh ? carouselImageContainer02 : carouselImageContainer2}>
-          <Image fill className={carouselImg} src={arrayCarousel[1]} alt="Corrousel image" style={{ objectFit: "contain" }} />
+          <Image fill className={carouselImg} src={arrayCarousel[1]} alt="Corrousel image" style={{ objectFit: "contain" }} priority={true} />
         </div>
         <div className={carouselMainButtonContainer}>
           <div className={carouselButtonContainer}>
