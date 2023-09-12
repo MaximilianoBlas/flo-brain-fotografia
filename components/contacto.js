@@ -62,86 +62,86 @@ export default function Contacto() {
   }, []);
 
   return (
-    onCS && (
-      <div className={mainContainer}>
-        {/* <div> */}
-        <form action="https://formsubmit.co/5b2874ac538366ee8f8a1f48f74e64a6" method="POST">
-          <div className={divForm}>
-            <div className={titleContainer}>
-              <h2 className={h2}>Contacto</h2>
-            </div>
+    // onCS && (
+    <div className={mainContainer}>
+      {/* <div> */}
+      <form action="https://formsubmit.co/5b2874ac538366ee8f8a1f48f74e64a6" method="POST">
+        <div className={divForm}>
+          <div className={titleContainer}>
+            <h2 className={h2}>Contacto</h2>
+          </div>
 
-            <div className={namesContainer}>
-              <div className={nameContainer}>
-                <label htmlFor="name" className={label}>
-                  Nombre
-                </label>
-                <input
-                  // value=""
-                  type="text"
-                  name="name"
-                  placeholder="Ingrese su nombre aquí"
-                  className={inputStyle}
-                  onChange={(e) => inputChange(e)}
-                />
-                {error.name && <p className={p}>{error.name}</p>}
-              </div>
-              <div className={lastNameContainer}>
-                <label htmlFor="lastname" className={label}>
-                  Apellido
-                </label>
-                <input
-                  // value=""
-                  type="text"
-                  name="lastname"
-                  placeholder="Ingrese su apellido aquí"
-                  className={inputStyle}
-                  onChange={(e) => inputChange(e)}
-                />
-                {error.lastname && <p className={p}>{error.lastname}</p>}
-              </div>
-            </div>
-            <div className={emailContainer}>
-              <label htmlFor="email" className={label}>
-                Email
+          <div className={namesContainer}>
+            <div className={nameContainer}>
+              <label htmlFor="name" className={label}>
+                Nombre
               </label>
               <input
                 // value=""
                 type="text"
-                name="email"
-                onChange={(e) => inputChange(e)}
+                name="name"
+                placeholder="Ingrese su nombre aquí"
                 className={inputStyle}
-                placeholder="Ingrese su mail aquí"
+                onChange={(e) => inputChange(e)}
               />
-              {error.email && <p className={p}>{error.email}</p>}
+              {error.name && <p className={p}>{error.name}</p>}
             </div>
-            <div className={messageContainer}>
-              <label htmlFor="message" className={label}>
-                Mensaje: ( Especificar fecha, tipo de sesión o evento) en caso de ser evento : Fecha/ cantidad de invitados / horario aproximados / cantidad de invitados.
+            <div className={lastNameContainer}>
+              <label htmlFor="lastname" className={label}>
+                Apellido
               </label>
-              <textarea
-                className={inputStyle}
+              <input
                 // value=""
-                name="message"
-                id=""
-                cols="30"
-                rows="5"
-                placeholder="Escribe tu mensaje"
+                type="text"
+                name="lastname"
+                placeholder="Ingrese su apellido aquí"
+                className={inputStyle}
                 onChange={(e) => inputChange(e)}
-              ></textarea>
-              {error.message && <p className={p}>{error.message}</p>}
+              />
+              {error.lastname && <p className={p}>{error.lastname}</p>}
             </div>
-            <div className={buttonContainer}>
-              <input className={button} type="submit" value="Enviar" />
-            </div>
-            <input type="hidden" name="_next" value="http://localhost:3000/"></input>
-            <input type="hidden" name="_captcha" value="false"></input>
-            <input type="hidden" name="_template" value="table"></input>
-            {/*podemos dar respuestas automaticas al mail enviado*/}
           </div>
-        </form>
-        {/* </div> */}
-      </div>
-    )
+          <div className={emailContainer}>
+            <label htmlFor="email" className={label}>
+              Email
+            </label>
+            <input
+              // value=""
+              type="text"
+              name="email"
+              onChange={(e) => inputChange(e)}
+              className={inputStyle}
+              placeholder="Ingrese su mail aquí"
+            />
+            {error.email && <p className={p}>{error.email}</p>}
+          </div>
+          <div className={messageContainer}>
+            <label htmlFor="message" className={label}>
+              (Especificar fecha y tipo de sesión o evento. En caso evento, agregar también cantidad de invitados y horarios aproximados.)
+            </label>
+            <textarea
+              className={inputStyle}
+              // value=""
+              name="message"
+              id=""
+              cols="30"
+              rows="5"
+              placeholder="Escriba su mensaje"
+              onChange={(e) => inputChange(e)}
+            ></textarea>
+            {error.message && <p className={p}>{error.message}</p>}
+          </div>
+          {/* <div className={buttonContainer}> */}
+          <input className={button} type="submit" value="Enviar" />
+          {/* </div> */}
+          <input type="hidden" name="_next" value="http://localhost:3000/"></input>
+          <input type="hidden" name="_captcha" value="false"></input>
+          <input type="hidden" name="_template" value="table"></input>
+          {/*podemos dar respuestas automaticas al mail enviado*/}
+        </div>
+      </form>
+      {/* </div> */}
+    </div>
   );
+  // );
 }
