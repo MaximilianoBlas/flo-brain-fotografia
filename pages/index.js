@@ -11,13 +11,8 @@ import DeployableNavBar from "@/components/deployableNavBar";
 import ContactButtons from "@/components/contactButtons";
 import DeployableDesktopNavBar from "@/components/deployableDesktopNavBar";
 
-import {
-  useEffect,
-  // useLayoutEffect,
-  useState,
-} from "react";
+import { useEffect, useState } from "react";
 import ServicesAndi from "@/components/servicesAndi";
-// import LocomotiveScroll from "locomotive-scroll";
 
 import {
   indexStyles,
@@ -46,19 +41,6 @@ export default function Home() {
     setOnCS(true);
   }, []);
 
-  // useLayoutEffect(() => {
-  //   const scroll = new LocomotiveScroll();
-  // });
-
-  // useEffect(() => {
-  //   // (async () => {
-  //   //   const LocomotiveScroll = (await import("locomotive-scroll")).default;
-  //   // const locomotiveScroll = new LocomotiveScroll();
-  //   // })();
-  // });
-
-  // const scroll = new LocomotiveScroll();
-
   return (
     onCS && (
       <div className={indexStyles} data-scroll-container>
@@ -76,7 +58,7 @@ export default function Home() {
           <Contacto />
           {/* </div> */}
         </div>
-        <Footer />
+        <Footer windowWidth={windowWidth} />
         <ToTopButton yAxis={yAxis} windowWidth={windowWidth} />
         {windowWidth <= 850 && <ContactButtons yAxis={yAxis} windowWidth={windowWidth} />}
         {windowWidth <= 850 && <DeployableNavBar yAxis={yAxis} />}

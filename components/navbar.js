@@ -20,22 +20,17 @@ export default function Navbar({ windowWidth }) {
         : console.log("scrollToY is failing");
     } else {
       console.log("U r pressing desktop navBar!");
-      e.target.id === "about" ? window.scrollTo({ top: 979, behavior: "smooth" }) : e.target.id === "services" ? window.scrollTo({ top: 1425, behavior: "smooth" }) : null;
+      e.target.id === "about"
+        ? window.scrollTo({ top: 852, behavior: "smooth" })
+        : e.target.id === "services"
+        ? window.scrollTo({ top: 1285, behavior: "smooth" })
+        : e.target.id === "gallery"
+        ? window.scrollTo({ top: 2016, behavior: "smooth" })
+        : e.target.id === "contact"
+        ? window.scrollTo({ top: 2847, behavior: "smooth" })
+        : null;
     }
   };
-
-  /*function scrollToY(e) {
-    e.preventDefault();
-
-    let href = e.currentTarget.href;
-    let targetId = href.replace(/.*\#/, "");
-    let targetElement = document.getElementById(targetId);
-    targetElement?.scrollIntoView({
-      behavior: "smooth",
-    });
-
-    console.log("im scrollin' to:", href.replace(/.*\#/, ""));
-  }*/
 
   return (
     <div className={container}>
