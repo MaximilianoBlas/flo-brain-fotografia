@@ -1,11 +1,12 @@
 import Navbar from "../components/navbar";
 import About from "@/components/about";
 import Gallery from "@/components/gallery";
-import Carousel from "./carousel";
-import Services from "./services";
-import Contacto from "./contacto";
-import LoaderMap from "./loaderMap";
+import Carousel from "../components/carousel";
+import Services from "../components/services";
+import Contacto from "../components/contacto";
+import LoaderMap from "../components/loaderMap";
 import Footer from "@/components/footer";
+
 import ToTopButton from "@/components/totopbutton";
 import DeployableNavBar from "@/components/deployableNavBar";
 import ContactButtons from "@/components/contactButtons";
