@@ -1,5 +1,5 @@
 const Utils = {
-  florCellphone: "+54 9 341 641-5852",
+  florWpp: "5493416415852",
   yAxisVisibleButtonValue: 302,
 };
 

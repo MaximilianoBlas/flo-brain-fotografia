@@ -1,0 +1,65 @@
+@import "/styles/theme.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+
+.deployableDesktopNavBarNav {
+  position: fixed;
+  top: 0px;
+  align-self: center;
+  z-index: 10;
+
+  width: 100vw;
+  height: 70px;
+  background-color: $navbarColor;
+
+  // border: 1px solid red;
+
+  transition: all 200ms ease;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoContainer {
+  position: relative;
+
+  height: 100%;
+  width: 200px;
+
+  // border: 1px solid red;
+  margin: 0 100px 0 0;
+}
+
+.deployableDesktopNavBarButtons {
+  height: 100%;
+  width: 170px;
+  background-color: transparent;
+
+  // padding: 0 0px;
+  border: none;
+  // border: 1px solid transparent;
+
+  font-family: "Nanum Myeongjo";
+  color: aliceblue;
+  font-size: 16px;
+
+  box-shadow: inset 0px 0px 0px 0px aliceblue;
+
+  transition: all 800ms ease;
+}
+
+.deployableDesktopNavBarButtons:hover {
+  cursor: pointer;
+
+  // border-bottom: 1px solid aliceblue;
+  box-shadow: inset 0px 15px 10px -15px aliceblue;
+}
+
+.DeployableDesktopNavLines {
+  height: 20px;
+
+  border: 1px solid aliceblue;
+  border-width: 0 1px 0 0;
+  // margin: 0 20px;
+}

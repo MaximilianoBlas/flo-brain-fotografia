@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap");
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 700px;
+  width: 100vw;
+
+  // border: 1px solid black;
+  margin: 20px 0 10px 0;
+}
+
+// .h2Container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   width: 100%;
+//   // height: 100%;
+
+//   padding: 0;
+//   // border: 1px solid blue;
+// }
+
+.title {
+  // align-self: center;
+  font-family: "Playfair" serif;
+
+  font-size: 30px;
+  font-weight: 500;
+
+  padding: 0 10px;
+  border-bottom: 1px solid black;
+  margin: 0 0 10px 0;
+
+  //   z-index: 2;
+}
+
+.serviceContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  // border: 1px solid green;
+  // margin-bottom: 10px;
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 19%;
+
+  // border: 1px solid rgb(53, 49, 42);
+  // border-radius: 8px;
+  margin: 0 5px;
+
+  // overflow: hidden;
+}
+
+.serviceTitle {
+  font-family: "Playfair" serif;
+
+  font-size: 22px;
+  font-weight: 500;
+
+  border-bottom: 1px solid black;
+  margin: 13px 0 10px 0;
+}
+
+.serviceContent {
+  height: 12%;
+  // width: 65%;
+  // position: relative;
+  text-align: center;
+  border: 0px none;
+  padding: 0;
+  margin: 0 0 5px 0;
+
+  overflow: hidden;
+}
+
+.serviceImageContainer {
+  position: relative;
+
+  height: 100%;
+  width: 95%;
+  // object-fit: contain;
+
+  overflow: hidden;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin: 0;
+
+  transition: all 0.9s ease-out, width 1.1s ease-out;
+
+  &:hover {
+    width: 110%;
+    border: 1px solid whitesmoke;
+    box-shadow: 0px 0px 5px 2px whitesmoke;
+    z-index: 3;
+  }
+}
+
+.serviceImage {
+  transition: filter 1100ms ease-out;
+  // &:hover {
+  // filter: blur(10px) grayscale(40%);
+  // }
+}
+
+.finalLine {
+  width: 60vw;
+  border: 1px solid grey;
+  border-width: 0 0 1px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
