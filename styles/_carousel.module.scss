@@ -241,27 +241,29 @@
     }
 
     .carouselImageContainer2 {
-        position: fixed;
+        position: static;
         width: 100%;
-        height: 30%;
+        height: 100%;
         display: flex;
         animation-name: carouselMoved2;
         animation-play-state: running;
         animation-duration: 1020ms;
         animation-timing-function: ease-in-out;
         opacity: 0;
+        margin-right: -100vw;
     }
 
     .carouselImageContainer02 {
-        position: fixed;
+        position: static;
         width: 100%;
-        height: 30%;
+        height: 100%;
         display: flex;
         animation-name: carouselMoved02;
         animation-play-state: running;
         animation-duration: 1020ms;
         animation-timing-function: ease-in-out;
         opacity: 0;
+        margin-right: -100vw;
     }
 
     .carouselButtonContainer {
