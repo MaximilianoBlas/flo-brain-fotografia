@@ -14,11 +14,12 @@
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "framer-motion": "^10.12.17",
+    "locomotive-scroll": "^4.1.4",
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-facebook-pixel": "^1.0.4",
     "sass": "^1.62.1",
-    "sharp": "^0.32.1"
+    "sharp": "^0.32.5"
   }
 }

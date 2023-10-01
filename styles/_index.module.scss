@@ -1,38 +1,39 @@
 @import "./theme.module.scss";
 
-//Phone
-@media screen and (max-width: 800px) {
-.mapContactoContainer{
-    display: flex;
-    flex-direction: column;
-}
-
-.toTopButtonVisible{
-background-color: red;
-border: 1px solid whitesmoke;
-border-radius: 300px;
-}
-.toTopButtonHidden{
-    background-color: $logoColor;
-    border: 1px solid whitesmoke;
-    border-radius: 300px;
-}}
-
 //Desktop
-.indexStyles{
-  background-color: #FFE9CE;
+.indexStyles {
+  background-color: #ffe9ce;
   margin: -10px;
-  width: 100vw;
+  max-width: 100vw;
   overflow: hidden;
 }
 
-.mapContactoContainer{
-    display: flex;
+.mapContactoContainer {
+  display: flex;
 }
 
-.mapContainer{
-    flex: 1;
+.mapContainer {
+  flex: 1;
 }
-.contactoContainer{
-    flex: 1;
+.contactoContainer {
+  flex: 1;
+}
+
+//Phone
+@media screen and (max-width: 800px) {
+  .mapContactoContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toTopButtonVisible {
+    background-color: red;
+    border: 1px solid whitesmoke;
+    border-radius: 300px;
+  }
+  .toTopButtonHidden {
+    background-color: $logoColor;
+    border: 1px solid whitesmoke;
+    border-radius: 300px;
+  }
 }
